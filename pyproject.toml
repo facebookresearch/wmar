@@ -1,0 +1,18 @@
+[tool.black]
+line-length = 120 
+preview = true 
+include = 'wmar/'
+[tool.isort] 
+profile = "black"
+skip = [
+    "*",
+    "!wmar/"
+]
+[tool.flake8]
+max-line-length = 120 
+extend-ignore = "E203,E501"
+max-complexity = 15 
+exclude = [
+    "*",
+    "!wmar/"
+]

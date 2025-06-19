@@ -1,0 +1,45 @@
+{
+    "cmd": "python3 generate.py",
+    "params": {
+        "num_chunks":                   1,
+        "chunk_id":                     [0],  
+        "model":                        "taming",
+        "modelpath":                    "checkpoints/2021-04-03T19-39-50_cin_transformer/",
+        "num_samples_per_conditioning": 100,
+        "conditioning":                 "1,9,232,340,568,656,703,814,937,975",
+        "batch_size":                   5,
+        "top_k":                        250,
+        "temperature":                  1.0,
+        "top_p":                        0.92,
+        "include_neural_compress":      true,
+        "include_diffpure":             true,
+        "wm_split_strategy":            "stratifiedrand",
+        "wm_context_size":              1,
+        "wm_gamma":                     0.25, 
+        "wm_delta":                     2,  
+        "wm_seed_strategy":             "linear",
+        "wm_method":                    "gentime",
+        "wampath":                      "checkpoints/wam_mit.pth",
+        "encoder_ft_ckpt": {
+            "none": {
+                "decoder_ft_ckpt":      "none",
+                "wam":                  false
+            },
+            "checkpoints/finetunes/taming_encoder_ft_noaug_delta.pth": {
+                "decoder_ft_ckpt":      "checkpoints/finetunes/taming_decoder_ft_noaug_delta.pth",
+                "wam":                  false
+            },
+            "checkpoints/finetunes/taming_encoder_ft_delta.pth": {
+                "decoder_ft_ckpt":      "checkpoints/finetunes/taming_decoder_ft_delta.pth",
+                "wam":                  [true, false]
+            }
+        },
+        "seed": 1
+    },
+    "meta": {
+        "group":     "", 
+        "name":      "0617_taming_generate", 
+        "dest-arg":  "yes",
+        "dest-name": "outdir"
+   }
+}

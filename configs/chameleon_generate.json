@@ -1,0 +1,45 @@
+{
+    "cmd": "python3 generate.py",
+    "params": {
+        "num_chunks":                   25,
+        "chunk_id":                     [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],  
+        "model":                        "chameleon7b",
+        "modelpath":                    "checkpoints/Anole-7b-v0.1",
+        "num_samples_per_conditioning": 1,
+        "conditioning":                 "assets/coco_prompts_1k.txt",
+        "top_k":                        -1, 
+        "top_p":                        0.9,
+        "temperature":                  0.9,
+        "batch_size":                   10,
+        "include_neural_compress":      true,
+        "include_diffpure":             true,
+        "wm_split_strategy":            "stratifiedrand",
+        "wm_context_size":              0,
+        "wm_gamma":                     0.25, 
+        "wm_delta":                     2,  
+        "wm_seed_strategy":             "fixed",
+        "wm_method":                    "gentime",
+        "wampath":                      "checkpoints/wam_mit.pth",
+        "encoder_ft_ckpt": {
+            "none": {
+                "decoder_ft_ckpt":      "none",
+                "wam":                  false
+            },
+            "checkpoints/finetunes/chameleon7b_encoder_ft_noaug_delta.pth": {
+                "decoder_ft_ckpt":      "checkpoints/finetunes/chameleon7b_decoder_ft_noaug_delta.pth",
+                "wam":                  false
+            },
+            "checkpoints/finetunes/chameleon7b_encoder_ft_delta.pth": {
+                "decoder_ft_ckpt":      "checkpoints/finetunes/chameleon7b_decoder_ft_delta.pth",
+                "wam":                  [true, false]
+            }
+        },
+        "seed": 1
+    },
+    "meta": {
+        "group":     "", 
+        "name":      "0617_chameleon_generate", 
+        "dest-arg":  "yes",
+        "dest-name": "outdir"
+   }
+}
