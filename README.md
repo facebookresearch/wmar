@@ -1,10 +1,10 @@
 # Watermarking Autoregressive Image Generation 🖼️💧
 
-Official implementation of [Watermarking Autoregressive Image Generation](https://arxiv.org/abs/TODO).
+Official implementation of [Watermarking Autoregressive Image Generation](https://files.sri.inf.ethz.ch/website/papers/jovanovic2025wmar.pdf).
 This repository provides a framework for watermarking autoregressive image models, and includes the code to reproduce the main results from the paper. 
 In `wmar_audio` we also provide the code accompanying our case study on Audio (see Section 5 in the paper). 
 
-[[`arXiv`](https://arxiv.org/abs/TODO)]
+[[`Paper`](https://files.sri.inf.ethz.ch/website/papers/jovanovic2025wmar.pdf)]
 [[`Colab`](https://colab.research.google.com/github/facebookresearch/wmar/blob/main/notebooks/colab.ipynb)]
 
 ## 💿 Installation
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 pip install triton==3.1.0 
 ```
 
-We next describe how to load all autoregressive models, finetuned tokenizer deltas, and other requirements. The simplest way to start is to execute `notebooks/colab.ipynb` (also hosted on [[`Colab`](https://colab.research.google.com/github/facebookresearch/wmar/blob/main/notebooks/colab.ipynb)]) which downloads only the necessary components from below.
+We next describe how to load all autoregressive models, finetuned tokenizer deltas, and other requirements. The simplest way to start is to execute `notebooks/colab.ipynb` (also hosted on [`Colab`](https://colab.research.google.com/github/facebookresearch/wmar/blob/main/notebooks/colab.ipynb)) which downloads only the necessary components from below.
 We assume that all checkpoints will be placed under `checkpoints/`.
 
 ### 2️⃣ Autoregressive Models
@@ -92,7 +92,7 @@ wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffu
 
 ### 1️⃣ Quickstart 
 
-The notebook `colab.ipynb` ([[`open in Colab`](https://colab.research.google.com/github/facebookresearch/wmar/blob/main/notebooks/colab.ipynb)] is a good starting point. 
+The notebook `colab.ipynb` ([`open in Colab`](https://colab.research.google.com/github/facebookresearch/wmar/blob/main/notebooks/colab.ipynb)) is a good starting point. 
 It downloads the necessary components to run watermarked generation with RAR (RAR, finetuned deltas, WAM) and illustrates the robustness of the watermark to transformations.
 
 ### 2️⃣ Large-scale generation and evaluation
