@@ -410,7 +410,7 @@ def main():
                     help="Watermark n-gram parameter")
     parser.add_argument("--wm_seed", type=int, default=0)
     parser.add_argument("--wm_sync", type=bool_inst, default=False,
-                    help="Whether to use sync watermarking")
+                    help="Whether to use sync watermarking. Very WIP.")
     
     # Model weights
     parser.add_argument("--tokenizer", type=str)

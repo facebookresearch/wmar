@@ -1,6 +1,6 @@
 # WMAR Audio
 
-We present the code for the audio study of the paper [Watermarking Autoregressive Image Generation](https://arxiv.org/abs/2506.16349). 
+We present the code for the audio study of the paper [Watermarking Autoregressive Image Generation](https://arxiv.org/abs/...). 
 The analysis and code of this folder is based on Moshi, a framework for duplex text-speech models: [[paper](https://kyutai.org/Moshi.pdf)],
 [[main_repo](https://github.com/kyutai-labs/moshi)] 
 
@@ -69,7 +69,7 @@ It can be downloaded from the [VoxPopuli repository](https://github.com/facebook
 We provide links to delta weights of the tokenizers finetuned for reverse-cycle-consistency (RCC) used in the paper: 
 | Finetuned | Finetuned with augmentations |
 | --- | --- |
-| [Encoder](https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_encoder_ft_noaug_delta.pth) / [Decoder](https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_decoder_ft_noaug_delta.pth) | [Encoder](https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_encoder_ft_delta.pth) / [Decoder](https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_decoder_ft_delta.pth) |
+| [Encoder/Decoder](https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_ft_noaug_delta.pth) | [Encoder/Decoder](https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_ft_delta.pth) |
 
 These deltas are the difference between the finetuned and original encoder/decoder weights.
 To use them, download the files and put them in `checkpoints/finetunes/`, then update the weights of the original decoder/encoder by adding the delta weights to the original ones.
@@ -77,22 +77,22 @@ To do this, you can use the `apply_deltas.py` script:
 
 ```bash
 # Download the delta files first (example URLs from the table above)
-wget https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_encoder_ft_delta.pth -O checkpoints/finetunes/mimi_encoder_ft_delta.pth
-wget https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_decoder_ft_delta.pth -O checkpoints/finetunes/mimi_decoder_ft_delta.pth
+mkdir -p checkpoints/finetunes
+wget https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_ft_delta.pth -O checkpoints/finetunes/mimi_ft_delta.pth
+wget https://dl.fbaipublicfiles.com/wmar/finetunes/mimi_ft_noaug_delta.pth -O checkpoints/finetunes/mimi_ft_noaug_delta.pth
 
 # Apply both encoder and decoder deltas to reconstruct the finetuned model
 python -m training.apply_deltas \
-    --encoder_delta checkpoints/finetunes/mimi_encoder_ft_delta.pth \
-    --decoder_delta checkpoints/finetunes/mimi_decoder_ft_delta.pth \
-    --output_name mimi_ft.pth
-
-python -m training.apply_deltas \
-    --encoder_delta checkpoints/finetunes/mimi_encoder_mimi_ft_noaug_delta.pth \
-    --decoder_delta checkpoints/finetunes/mimi_decoder_mimi_ft_noaug_delta.pth \
+    --delta_path checkpoints/finetunes/mimi_deltas_ft_noaug.pth \
+    --output_dir checkpoints/finetunes/ \
     --output_name mimi_ft_noaug.pth
+python -m training.apply_deltas \
+    --delta_path checkpoints/finetunes/mimi_deltas_ft.pth \
+    --output_dir checkpoints/finetunes/ \
+    --output_name mimi_ft.pth
 ```
 
-The script will automatically download the original MIMI model, apply the specified deltas, and save the reconstructed model state dictionary in the checkpoints/finetunes/` directory.
+The script will automatically download the original MIMI model, apply the specified deltas, and save the reconstructed model state dictionary in the `checkpoints/finetunes/` directory.
 
 
 
