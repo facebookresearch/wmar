@@ -1,0 +1,1634 @@
+---Beginning program ---
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+0 - SLURM_JOB_ID: 49387253
+0 - SLURM_JOB_NODELIST: machine[7092,7094]
+0 - SLURM_JOB_NUM_NODES: 2
+0 - SLURM_NTASKS: 16
+0 - SLURM_TASKS_PER_NODE: 8(x2)
+0 - SLURM_MEM_PER_NODE: None
+0 - SLURM_MEM_PER_CPU: 8192
+0 - SLURM_NODEID: 0
+0 - SLURM_PROCID: 0
+0 - SLURM_LOCALID: 0
+0 - SLURM_TASK_PID: 2080383
+0 - Master address: machine7092
+0 - Master port   : 18078
+0 - Number of nodes: 2
+0 - Node ID        : 0
+0 - Local rank     : 0
+0 - Global rank    : 0
+0 - World size     : 16
+0 - GPUs per node  : 8
+0 - Master         : True
+0 - Multi-node     : True
+0 - Multi-GPU      : True
+0 - Hostname       : machine7092
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R0] DDP initialized with local rank 0 and world size 16
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+8 - SLURM_JOB_ID: 49387253
+8 - SLURM_JOB_NODELIST: machine[7092,7094]
+8 - SLURM_JOB_NUM_NODES: 2
+8 - SLURM_NTASKS: 16
+8 - SLURM_TASKS_PER_NODE: 8(x2)
+8 - SLURM_MEM_PER_NODE: None
+8 - SLURM_MEM_PER_CPU: 8192
+8 - SLURM_NODEID: 1
+8 - SLURM_PROCID: 8
+8 - SLURM_LOCALID: 0
+8 - SLURM_TASK_PID: 2469769
+8 - Master address: machine7092
+8 - Master port   : 18078
+8 - Number of nodes: 2
+8 - Node ID        : 1
+8 - Local rank     : 0
+8 - Global rank    : 8
+8 - World size     : 16
+8 - GPUs per node  : 8
+8 - Master         : False
+8 - Multi-node     : True
+8 - Multi-GPU      : True
+8 - Hostname       : machine7094
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R8] DDP initialized with local rank 0 and world size 16
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+1 - SLURM_JOB_ID: 49387253
+1 - SLURM_JOB_NODELIST: machine[7092,7094]
+1 - SLURM_JOB_NUM_NODES: 2
+1 - SLURM_NTASKS: 16
+1 - SLURM_TASKS_PER_NODE: 8(x2)
+1 - SLURM_MEM_PER_NODE: None
+1 - SLURM_MEM_PER_CPU: 8192
+1 - SLURM_NODEID: 0
+1 - SLURM_PROCID: 1
+1 - SLURM_LOCALID: 1
+1 - SLURM_TASK_PID: 2080384
+1 - Master address: machine7092
+1 - Master port   : 18078
+1 - Number of nodes: 2
+1 - Node ID        : 0
+1 - Local rank     : 1
+1 - Global rank    : 1
+1 - World size     : 16
+1 - GPUs per node  : 8
+1 - Master         : False
+1 - Multi-node     : True
+1 - Multi-GPU      : True
+1 - Hostname       : machine7092
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R1] DDP initialized with local rank 1 and world size 16
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R8] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 0, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 1, 'global_rank': 8, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R1] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 1, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 0, 'global_rank': 1, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+9 - SLURM_JOB_ID: 49387253
+9 - SLURM_JOB_NODELIST: machine[7092,7094]
+9 - SLURM_JOB_NUM_NODES: 2
+9 - SLURM_NTASKS: 16
+9 - SLURM_TASKS_PER_NODE: 8(x2)
+9 - SLURM_MEM_PER_NODE: None
+9 - SLURM_MEM_PER_CPU: 8192
+9 - SLURM_NODEID: 1
+9 - SLURM_PROCID: 9
+9 - SLURM_LOCALID: 1
+9 - SLURM_TASK_PID: 2469770
+9 - Master address: machine7092
+9 - Master port   : 18078
+9 - Number of nodes: 2
+9 - Node ID        : 1
+9 - Local rank     : 1
+9 - Global rank    : 9
+9 - World size     : 16
+9 - GPUs per node  : 8
+9 - Master         : False
+9 - Multi-node     : True
+9 - Multi-GPU      : True
+9 - Hostname       : machine7094
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R9] DDP initialized with local rank 1 and world size 16
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+2 - SLURM_JOB_ID: 49387253
+2 - SLURM_JOB_NODELIST: machine[7092,7094]
+2 - SLURM_JOB_NUM_NODES: 2
+2 - SLURM_NTASKS: 16
+2 - SLURM_TASKS_PER_NODE: 8(x2)
+2 - SLURM_MEM_PER_NODE: None
+2 - SLURM_MEM_PER_CPU: 8192
+2 - SLURM_NODEID: 0
+2 - SLURM_PROCID: 2
+2 - SLURM_LOCALID: 2
+2 - SLURM_TASK_PID: 2080385
+2 - Master address: machine7092
+2 - Master port   : 18078
+2 - Number of nodes: 2
+2 - Node ID        : 0
+2 - Local rank     : 2
+2 - Global rank    : 2
+2 - World size     : 16
+2 - GPUs per node  : 8
+2 - Master         : False
+2 - Multi-node     : True
+2 - Multi-GPU      : True
+2 - Hostname       : machine7092
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R2] DDP initialized with local rank 2 and world size 16
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R9] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 1, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 1, 'global_rank': 9, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R2] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 2, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 0, 'global_rank': 2, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R2] Setting seed to 200
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+10 - SLURM_JOB_ID: 49387253
+10 - SLURM_JOB_NODELIST: machine[7092,7094]
+10 - SLURM_JOB_NUM_NODES: 2
+10 - SLURM_NTASKS: 16
+10 - SLURM_TASKS_PER_NODE: 8(x2)
+10 - SLURM_MEM_PER_NODE: None
+10 - SLURM_MEM_PER_CPU: 8192
+10 - SLURM_NODEID: 1
+10 - SLURM_PROCID: 10
+10 - SLURM_LOCALID: 2
+10 - SLURM_TASK_PID: 2469771
+10 - Master address: machine7092
+10 - Master port   : 18078
+10 - Number of nodes: 2
+10 - Node ID        : 1
+10 - Local rank     : 2
+10 - Global rank    : 10
+10 - World size     : 16
+10 - GPUs per node  : 8
+10 - Master         : False
+10 - Multi-node     : True
+10 - Multi-GPU      : True
+10 - Hostname       : machine7094
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R10] DDP initialized with local rank 2 and world size 16
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+3 - SLURM_JOB_ID: 49387253
+3 - SLURM_JOB_NODELIST: machine[7092,7094]
+3 - SLURM_JOB_NUM_NODES: 2
+3 - SLURM_NTASKS: 16
+3 - SLURM_TASKS_PER_NODE: 8(x2)
+3 - SLURM_MEM_PER_NODE: None
+3 - SLURM_MEM_PER_CPU: 8192
+3 - SLURM_NODEID: 0
+3 - SLURM_PROCID: 3
+3 - SLURM_LOCALID: 3
+3 - SLURM_TASK_PID: 2080386
+3 - Master address: machine7092
+3 - Master port   : 18078
+3 - Number of nodes: 2
+3 - Node ID        : 0
+3 - Local rank     : 3
+3 - Global rank    : 3
+3 - World size     : 16
+3 - GPUs per node  : 8
+3 - Master         : False
+3 - Multi-node     : True
+3 - Multi-GPU      : True
+3 - Hostname       : machine7092
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R3] DDP initialized with local rank 3 and world size 16
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R10] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 2, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 1, 'global_rank': 10, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R10] Setting seed to 200
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R3] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 3, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 0, 'global_rank': 3, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R3] Setting seed to 300
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+11 - SLURM_JOB_ID: 49387253
+11 - SLURM_JOB_NODELIST: machine[7092,7094]
+11 - SLURM_JOB_NUM_NODES: 2
+11 - SLURM_NTASKS: 16
+11 - SLURM_TASKS_PER_NODE: 8(x2)
+11 - SLURM_MEM_PER_NODE: None
+11 - SLURM_MEM_PER_CPU: 8192
+11 - SLURM_NODEID: 1
+11 - SLURM_PROCID: 11
+11 - SLURM_LOCALID: 3
+11 - SLURM_TASK_PID: 2469772
+11 - Master address: machine7092
+11 - Master port   : 18078
+11 - Number of nodes: 2
+11 - Node ID        : 1
+11 - Local rank     : 3
+11 - Global rank    : 11
+11 - World size     : 16
+11 - GPUs per node  : 8
+11 - Master         : False
+11 - Multi-node     : True
+11 - Multi-GPU      : True
+11 - Hostname       : machine7094
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R11] DDP initialized with local rank 3 and world size 16
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+4 - SLURM_JOB_ID: 49387253
+4 - SLURM_JOB_NODELIST: machine[7092,7094]
+4 - SLURM_JOB_NUM_NODES: 2
+4 - SLURM_NTASKS: 16
+4 - SLURM_TASKS_PER_NODE: 8(x2)
+4 - SLURM_MEM_PER_NODE: None
+4 - SLURM_MEM_PER_CPU: 8192
+4 - SLURM_NODEID: 0
+4 - SLURM_PROCID: 4
+4 - SLURM_LOCALID: 4
+4 - SLURM_TASK_PID: 2080387
+4 - Master address: machine7092
+4 - Master port   : 18078
+4 - Number of nodes: 2
+4 - Node ID        : 0
+4 - Local rank     : 4
+4 - Global rank    : 4
+4 - World size     : 16
+4 - GPUs per node  : 8
+4 - Master         : False
+4 - Multi-node     : True
+4 - Multi-GPU      : True
+4 - Hostname       : machine7092
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R4] DDP initialized with local rank 4 and world size 16
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R11] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 3, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 1, 'global_rank': 11, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R11] Setting seed to 300
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R4] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 4, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 0, 'global_rank': 4, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R4] Setting seed to 400
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+12 - SLURM_JOB_ID: 49387253
+12 - SLURM_JOB_NODELIST: machine[7092,7094]
+12 - SLURM_JOB_NUM_NODES: 2
+12 - SLURM_NTASKS: 16
+12 - SLURM_TASKS_PER_NODE: 8(x2)
+12 - SLURM_MEM_PER_NODE: None
+12 - SLURM_MEM_PER_CPU: 8192
+12 - SLURM_NODEID: 1
+12 - SLURM_PROCID: 12
+12 - SLURM_LOCALID: 4
+12 - SLURM_TASK_PID: 2469773
+12 - Master address: machine7092
+12 - Master port   : 18078
+12 - Number of nodes: 2
+12 - Node ID        : 1
+12 - Local rank     : 4
+12 - Global rank    : 12
+12 - World size     : 16
+12 - GPUs per node  : 8
+12 - Master         : False
+12 - Multi-node     : True
+12 - Multi-GPU      : True
+12 - Hostname       : machine7094
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R12] DDP initialized with local rank 4 and world size 16
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+5 - SLURM_JOB_ID: 49387253
+5 - SLURM_JOB_NODELIST: machine[7092,7094]
+5 - SLURM_JOB_NUM_NODES: 2
+5 - SLURM_NTASKS: 16
+5 - SLURM_TASKS_PER_NODE: 8(x2)
+5 - SLURM_MEM_PER_NODE: None
+5 - SLURM_MEM_PER_CPU: 8192
+5 - SLURM_NODEID: 0
+5 - SLURM_PROCID: 5
+5 - SLURM_LOCALID: 5
+5 - SLURM_TASK_PID: 2080388
+5 - Master address: machine7092
+5 - Master port   : 18078
+5 - Number of nodes: 2
+5 - Node ID        : 0
+5 - Local rank     : 5
+5 - Global rank    : 5
+5 - World size     : 16
+5 - GPUs per node  : 8
+5 - Master         : False
+5 - Multi-node     : True
+5 - Multi-GPU      : True
+5 - Hostname       : machine7092
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R5] DDP initialized with local rank 5 and world size 16
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R12] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 4, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 1, 'global_rank': 12, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R12] Setting seed to 400
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R5] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 5, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 0, 'global_rank': 5, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R5] Setting seed to 500
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+13 - SLURM_JOB_ID: 49387253
+13 - SLURM_JOB_NODELIST: machine[7092,7094]
+13 - SLURM_JOB_NUM_NODES: 2
+13 - SLURM_NTASKS: 16
+13 - SLURM_TASKS_PER_NODE: 8(x2)
+13 - SLURM_MEM_PER_NODE: None
+13 - SLURM_MEM_PER_CPU: 8192
+13 - SLURM_NODEID: 1
+13 - SLURM_PROCID: 13
+13 - SLURM_LOCALID: 5
+13 - SLURM_TASK_PID: 2469774
+13 - Master address: machine7092
+13 - Master port   : 18078
+13 - Number of nodes: 2
+13 - Node ID        : 1
+13 - Local rank     : 5
+13 - Global rank    : 13
+13 - World size     : 16
+13 - GPUs per node  : 8
+13 - Master         : False
+13 - Multi-node     : True
+13 - Multi-GPU      : True
+13 - Hostname       : machine7094
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R13] DDP initialized with local rank 5 and world size 16
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+6 - SLURM_JOB_ID: 49387253
+6 - SLURM_JOB_NODELIST: machine[7092,7094]
+6 - SLURM_JOB_NUM_NODES: 2
+6 - SLURM_NTASKS: 16
+6 - SLURM_TASKS_PER_NODE: 8(x2)
+6 - SLURM_MEM_PER_NODE: None
+6 - SLURM_MEM_PER_CPU: 8192
+6 - SLURM_NODEID: 0
+6 - SLURM_PROCID: 6
+6 - SLURM_LOCALID: 6
+6 - SLURM_TASK_PID: 2080389
+6 - Master address: machine7092
+6 - Master port   : 18078
+6 - Number of nodes: 2
+6 - Node ID        : 0
+6 - Local rank     : 6
+6 - Global rank    : 6
+6 - World size     : 16
+6 - GPUs per node  : 8
+6 - Master         : False
+6 - Multi-node     : True
+6 - Multi-GPU      : True
+6 - Hostname       : machine7092
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R6] DDP initialized with local rank 6 and world size 16
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R13] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 5, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 1, 'global_rank': 13, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R13] Setting seed to 500
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R6] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 6, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 0, 'global_rank': 6, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R6] Setting seed to 600
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+14 - SLURM_JOB_ID: 49387253
+14 - SLURM_JOB_NODELIST: machine[7092,7094]
+14 - SLURM_JOB_NUM_NODES: 2
+14 - SLURM_NTASKS: 16
+14 - SLURM_TASKS_PER_NODE: 8(x2)
+14 - SLURM_MEM_PER_NODE: None
+14 - SLURM_MEM_PER_CPU: 8192
+14 - SLURM_NODEID: 1
+14 - SLURM_PROCID: 14
+14 - SLURM_LOCALID: 6
+14 - SLURM_TASK_PID: 2469775
+14 - Master address: machine7092
+14 - Master port   : 18078
+14 - Number of nodes: 2
+14 - Node ID        : 1
+14 - Local rank     : 6
+14 - Global rank    : 14
+14 - World size     : 16
+14 - GPUs per node  : 8
+14 - Master         : False
+14 - Multi-node     : True
+14 - Multi-GPU      : True
+14 - Hostname       : machine7094
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R14] DDP initialized with local rank 6 and world size 16
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+7 - SLURM_JOB_ID: 49387253
+7 - SLURM_JOB_NODELIST: machine[7092,7094]
+7 - SLURM_JOB_NUM_NODES: 2
+7 - SLURM_NTASKS: 16
+7 - SLURM_TASKS_PER_NODE: 8(x2)
+7 - SLURM_MEM_PER_NODE: None
+7 - SLURM_MEM_PER_CPU: 8192
+7 - SLURM_NODEID: 0
+7 - SLURM_PROCID: 7
+7 - SLURM_LOCALID: 7
+7 - SLURM_TASK_PID: 2080390
+7 - Master address: machine7092
+7 - Master port   : 18078
+7 - Number of nodes: 2
+7 - Node ID        : 0
+7 - Local rank     : 7
+7 - Global rank    : 7
+7 - World size     : 16
+7 - GPUs per node  : 8
+7 - Master         : False
+7 - Multi-node     : True
+7 - Multi-GPU      : True
+7 - Hostname       : machine7092
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R7] DDP initialized with local rank 7 and world size 16
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R14] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 6, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 1, 'global_rank': 14, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R14] Setting seed to 600
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R7] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 7, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 0, 'global_rank': 7, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R7] Setting seed to 700
+attention mode is flash
+Local rank: -1 | Master port: 18078 | Debug SLURM: False
+SLURM job: True
+15 - SLURM_JOB_ID: 49387253
+15 - SLURM_JOB_NODELIST: machine[7092,7094]
+15 - SLURM_JOB_NUM_NODES: 2
+15 - SLURM_NTASKS: 16
+15 - SLURM_TASKS_PER_NODE: 8(x2)
+15 - SLURM_MEM_PER_NODE: None
+15 - SLURM_MEM_PER_CPU: 8192
+15 - SLURM_NODEID: 1
+15 - SLURM_PROCID: 15
+15 - SLURM_LOCALID: 7
+15 - SLURM_TASK_PID: 2469776
+15 - Master address: machine7092
+15 - Master port   : 18078
+15 - Number of nodes: 2
+15 - Node ID        : 1
+15 - Local rank     : 7
+15 - Global rank    : 15
+15 - World size     : 16
+15 - GPUs per node  : 8
+15 - Master         : False
+15 - Multi-node     : True
+15 - Multi-GPU      : True
+15 - Hostname       : machine7094
+Initializing PyTorch distributed ...
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:168 - [R15] DDP initialized with local rank 7 and world size 16
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R0] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 0, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 0, 'global_rank': 0, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': True, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R0] Setting seed to 0
+2025-06-20 15:10:41.151 | DEBUG    | __main__:<module>:171 - [R15] Args: {'model': 'taming', 'modelpath': '/nkl/2021-04-03T19-39-50_cin_transformer/', 'dataset': 'codes-imagenet', 'datapath': '/nkl/imagenet_taming/codes', 'dataset_size': 50000, 'mode': 'newenc-dec', 'nb_epochs': 10, 'augs_schedule': '1,1,4,4', 'optimizer': 'adam', 'lr': 0.0001, 'batch_size_per_gpu': 4, 'disable_gan': True, 'idempotence_loss_weight': 1.0, 'idempotence_loss_weight_factor': 1.0, 'loss': 'hard-to-soft-with-ae', 'augs': 'all+geom', 'outdir': '/nkl/2025_logs/0620_taming_ft/expe', 'local_rank': 7, 'master_port': 18078, 'debug_slurm': False, 'is_slurm_job': True, 'job_id': '49387253', 'n_nodes': 2, 'node_id': 1, 'global_rank': 15, 'world_size': 16, 'n_gpu_per_node': 8, 'master_addr': 'machine7092', 'is_master': False, 'multi_node': True, 'distributed': True}
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R15] Setting seed to 700
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R1] Setting seed to 100
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R8] Setting seed to 0
+2025-06-20 15:10:41.151 | INFO     | __main__:<module>:176 - [R9] Setting seed to 100
+2025-06-20 15:10:41.159 | INFO     | __main__:<module>:188 - [R0] Logging to /nkl/2025_logs/0620_taming_ft/expe
+2025-06-20 15:10:41.207 | INFO     | __main__:<module>:235 - [R12] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.207 | INFO     | __main__:<module>:235 - [R8] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.207 | INFO     | __main__:<module>:235 - [R7] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.207 | INFO     | __main__:<module>:235 - [R5] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.207 | INFO     | __main__:<module>:235 - [R10] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.207 | INFO     | __main__:<module>:235 - [R11] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.207 | INFO     | __main__:<module>:235 - [R13] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.208 | INFO     | __main__:<module>:235 - [R3] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.208 | INFO     | __main__:<module>:235 - [R15] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.208 | INFO     | __main__:<module>:235 - [R6] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.208 | INFO     | __main__:<module>:235 - [R1] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.208 | INFO     | __main__:<module>:235 - [R9] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.208 | INFO     | __main__:<module>:235 - [R4] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.210 | INFO     | __main__:<module>:235 - [R2] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.211 | INFO     | __main__:<module>:235 - [R0] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.212 | INFO     | __main__:<module>:235 - [R14] Using 47500 codes-imagenet for training and 2500 for evaluating
+2025-06-20 15:10:41.212 | INFO     | __main__:<module>:248 - [R0] Prefetched LPIPS VGG checkpoint -- should be accessible by all other GPUs now
+2025-06-20 15:10:44.483 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.484 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.484 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+loaded pretrained LPIPS loss from checkpoints/lpips/vgg.pth
+VQLPIPSWithDiscriminator running with hinge loss.
+2025-06-20 15:10:44.489 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.489 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.489 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.492 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.510 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.525 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.525 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.527 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.525 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.531 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.532 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.533 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.539 | INFO     | wmar.models.armm_wrapper:load_model:115 - Cloned encoder to watermark_encoder!
+2025-06-20 15:10:44.711 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.712 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.723 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.723 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.726 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.724 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.740 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.740 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.752 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.753 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.755 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.763 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.774 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.776 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.779 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.787 | INFO     | wmar.models.armm_wrapper:load_model:125 - Cloned decoder to orig_decoder!
+2025-06-20 15:10:44.917 | INFO     | __main__:<module>:284 - [R5] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.917 | DEBUG    | __main__:<module>:292 - [R5] Disabled GAN
+2025-06-20 15:10:44.918 | INFO     | __main__:<module>:307 - [R5] #Params to optimize: 338
+2025-06-20 15:10:44.919 | INFO     | __main__:<module>:284 - [R1] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.919 | DEBUG    | __main__:<module>:292 - [R1] Disabled GAN
+2025-06-20 15:10:44.920 | INFO     | __main__:<module>:307 - [R1] #Params to optimize: 338
+2025-06-20 15:10:44.926 | INFO     | __main__:<module>:284 - [R0] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.927 | DEBUG    | __main__:<module>:292 - [R0] Disabled GAN
+2025-06-20 15:10:44.928 | INFO     | __main__:<module>:307 - [R0] #Params to optimize: 338
+2025-06-20 15:10:44.929 | INFO     | __main__:<module>:284 - [R6] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.930 | DEBUG    | __main__:<module>:292 - [R6] Disabled GAN
+2025-06-20 15:10:44.931 | INFO     | __main__:<module>:307 - [R6] #Params to optimize: 338
+2025-06-20 15:10:44.931 | INFO     | __main__:<module>:284 - [R2] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.931 | DEBUG    | __main__:<module>:292 - [R2] Disabled GAN
+2025-06-20 15:10:44.932 | INFO     | __main__:<module>:307 - [R2] #Params to optimize: 338
+2025-06-20 15:10:44.932 | INFO     | __main__:<module>:284 - [R4] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.933 | DEBUG    | __main__:<module>:292 - [R4] Disabled GAN
+2025-06-20 15:10:44.934 | INFO     | __main__:<module>:307 - [R4] #Params to optimize: 338
+2025-06-20 15:10:44.944 | INFO     | __main__:<module>:284 - [R7] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.944 | DEBUG    | __main__:<module>:292 - [R7] Disabled GAN
+2025-06-20 15:10:44.944 | INFO     | __main__:<module>:284 - [R3] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.944 | DEBUG    | __main__:<module>:292 - [R3] Disabled GAN
+2025-06-20 15:10:44.945 | INFO     | __main__:<module>:307 - [R7] #Params to optimize: 338
+2025-06-20 15:10:44.946 | INFO     | __main__:<module>:307 - [R3] #Params to optimize: 338
+2025-06-20 15:10:44.957 | INFO     | __main__:<module>:284 - [R14] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.957 | DEBUG    | __main__:<module>:292 - [R14] Disabled GAN
+2025-06-20 15:10:44.958 | INFO     | __main__:<module>:307 - [R14] #Params to optimize: 338
+2025-06-20 15:10:44.961 | INFO     | __main__:<module>:284 - [R12] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.962 | DEBUG    | __main__:<module>:292 - [R12] Disabled GAN
+2025-06-20 15:10:44.963 | INFO     | __main__:<module>:307 - [R12] #Params to optimize: 338
+2025-06-20 15:10:44.965 | INFO     | __main__:<module>:284 - [R9] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.965 | DEBUG    | __main__:<module>:292 - [R9] Disabled GAN
+2025-06-20 15:10:44.966 | INFO     | __main__:<module>:284 - [R10] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.966 | DEBUG    | __main__:<module>:292 - [R10] Disabled GAN
+2025-06-20 15:10:44.967 | INFO     | __main__:<module>:307 - [R9] #Params to optimize: 338
+2025-06-20 15:10:44.967 | INFO     | __main__:<module>:307 - [R10] #Params to optimize: 338
+2025-06-20 15:10:44.980 | INFO     | __main__:<module>:284 - [R8] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.980 | DEBUG    | __main__:<module>:292 - [R8] Disabled GAN
+2025-06-20 15:10:44.981 | INFO     | __main__:<module>:307 - [R8] #Params to optimize: 338
+2025-06-20 15:10:44.984 | INFO     | __main__:<module>:284 - [R15] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.984 | DEBUG    | __main__:<module>:292 - [R15] Disabled GAN
+2025-06-20 15:10:44.985 | INFO     | __main__:<module>:307 - [R15] #Params to optimize: 338
+2025-06-20 15:10:44.990 | INFO     | __main__:<module>:284 - [R11] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.990 | DEBUG    | __main__:<module>:292 - [R11] Disabled GAN
+2025-06-20 15:10:44.991 | INFO     | __main__:<module>:307 - [R11] #Params to optimize: 338
+2025-06-20 15:10:44.993 | INFO     | __main__:<module>:284 - [R13] Loaded VQGAN+Loss model from /nkl/2021-04-03T19-39-50_cin_transformer/
+2025-06-20 15:10:44.993 | DEBUG    | __main__:<module>:292 - [R13] Disabled GAN
+2025-06-20 15:10:44.994 | INFO     | __main__:<module>:307 - [R13] #Params to optimize: 338
+2025-06-20 15:10:45.126 | INFO     | __main__:<module>:389 - [R5] Epoch 1/10 Validation
+2025-06-20 15:10:45.126 | INFO     | __main__:<module>:389 - [R7] Epoch 1/10 Validation
+2025-06-20 15:10:45.126 | INFO     | __main__:<module>:389 - [R3] Epoch 1/10 Validation
+2025-06-20 15:10:45.126 | INFO     | __main__:<module>:389 - [R10] Epoch 1/10 Validation
+2025-06-20 15:10:45.126 | INFO     | __main__:<module>:389 - [R9] Epoch 1/10 Validation
+2025-06-20 15:10:45.126 | INFO     | __main__:<module>:389 - [R14] Epoch 1/10 Validation
+2025-06-20 15:10:45.127 | INFO     | __main__:<module>:389 - [R15] Epoch 1/10 Validation
+2025-06-20 15:10:45.127 | INFO     | __main__:<module>:389 - [R11] Epoch 1/10 Validation
+Adding 1 epochs of augs
+Adding 1 epochs of augs
+Adding 4 epochs of augs
+Adding 4 epochs of augs
+2025-06-20 15:10:45.127 | INFO     | __main__:<module>:389 - [R0] Epoch 1/10 Validation
+2025-06-20 15:10:45.127 | INFO     | __main__:<module>:389 - [R13] Epoch 1/10 Validation
+2025-06-20 15:10:45.127 | INFO     | __main__:<module>:389 - [R4] Epoch 1/10 Validation
+2025-06-20 15:10:45.127 | INFO     | __main__:<module>:389 - [R2] Epoch 1/10 Validation
+2025-06-20 15:10:45.127 | INFO     | __main__:<module>:389 - [R6] Epoch 1/10 Validation
+2025-06-20 15:10:45.127 | INFO     | __main__:<module>:389 - [R12] Epoch 1/10 Validation
+2025-06-20 15:10:45.133 | INFO     | __main__:<module>:389 - [R8] Epoch 1/10 Validation
+2025-06-20 15:10:45.134 | INFO     | __main__:<module>:389 - [R1] Epoch 1/10 Validation
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R1] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R9] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R3] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R11] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R5] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R12] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R7] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R15] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R13] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R14] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R8] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R10] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R6] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R2] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.986 | INFO     | __main__:<module>:398 - [R4] Epoch 1/10 Training - 742 batches
+2025-06-20 15:10:54.991 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.03018| IdemLoss: 0.03018| VQGANLoss: 0.00000| L0: 0.24592
+2025-06-20 15:10:55.017 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 0.00000, DEC L2 Distance: 0.00000
+2025-06-20 15:10:55.019 | INFO     | __main__:<module>:398 - [R0] Epoch 1/10 Training - 742 batches
+2025-06-20 15:11:20.826 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=1) (lr=0.00010)| Loss: 0.02609| IdemLoss: 0.01725| VQGANLoss: 0.00884| L0: 0.13005
+2025-06-20 15:11:21.553 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.20760, DEC L2 Distance: 0.06739
+2025-06-20 15:11:46.739 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=2) (lr=0.00010)| Loss: 0.02050| IdemLoss: 0.01436| VQGANLoss: 0.00614| L0: 0.09050
+2025-06-20 15:11:47.478 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.29621, DEC L2 Distance: 0.09153
+2025-06-20 15:12:12.698 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=3) (lr=0.00010)| Loss: 0.02125| IdemLoss: 0.01341| VQGANLoss: 0.00783| L0: 0.07858
+2025-06-20 15:12:13.434 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.36176, DEC L2 Distance: 0.11684
+2025-06-20 15:12:38.706 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=4) (lr=0.00010)| Loss: 0.01955| IdemLoss: 0.01289| VQGANLoss: 0.00665| L0: 0.07133
+2025-06-20 15:12:39.406 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.42248, DEC L2 Distance: 0.13343
+2025-06-20 15:13:04.692 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=5) (lr=0.00010)| Loss: 0.02079| IdemLoss: 0.01272| VQGANLoss: 0.00807| L0: 0.06892
+2025-06-20 15:13:05.388 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.47532, DEC L2 Distance: 0.13633
+2025-06-20 15:13:30.702 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=6) (lr=0.00010)| Loss: 0.01867| IdemLoss: 0.01227| VQGANLoss: 0.00641| L0: 0.06409
+2025-06-20 15:13:31.465 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.52183, DEC L2 Distance: 0.13981
+2025-06-20 15:13:56.758 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=7) (lr=0.00010)| Loss: 0.01830| IdemLoss: 0.01186| VQGANLoss: 0.00644| L0: 0.05960
+2025-06-20 15:13:57.405 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.56239, DEC L2 Distance: 0.13765
+2025-06-20 15:14:22.701 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=8) (lr=0.00010)| Loss: 0.01743| IdemLoss: 0.01172| VQGANLoss: 0.00571| L0: 0.05830
+2025-06-20 15:14:23.450 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.60019, DEC L2 Distance: 0.13652
+2025-06-20 15:14:48.705 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=9) (lr=0.00010)| Loss: 0.01661| IdemLoss: 0.01151| VQGANLoss: 0.00510| L0: 0.05571
+2025-06-20 15:14:49.385 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.63702, DEC L2 Distance: 0.13598
+2025-06-20 15:15:14.711 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=10) (lr=0.00010)| Loss: 0.01754| IdemLoss: 0.01127| VQGANLoss: 0.00626| L0: 0.05291
+2025-06-20 15:15:15.461 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.67347, DEC L2 Distance: 0.13822
+2025-06-20 15:15:40.744 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=11) (lr=0.00010)| Loss: 0.01634| IdemLoss: 0.01117| VQGANLoss: 0.00516| L0: 0.05181
+2025-06-20 15:15:41.383 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.70889, DEC L2 Distance: 0.13913
+2025-06-20 15:16:06.686 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=12) (lr=0.00010)| Loss: 0.01604| IdemLoss: 0.01115| VQGANLoss: 0.00489| L0: 0.05154
+2025-06-20 15:16:07.502 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.74279, DEC L2 Distance: 0.13934
+2025-06-20 15:16:32.826 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=13) (lr=0.00010)| Loss: 0.01621| IdemLoss: 0.01097| VQGANLoss: 0.00524| L0: 0.04922
+2025-06-20 15:16:33.506 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.77823, DEC L2 Distance: 0.14387
+2025-06-20 15:16:58.832 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=14) (lr=0.00010)| Loss: 0.01644| IdemLoss: 0.01096| VQGANLoss: 0.00548| L0: 0.04878
+2025-06-20 15:16:59.561 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.81015, DEC L2 Distance: 0.14737
+2025-06-20 15:17:20.826 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=15) (lr=0.00010)| Loss: 0.01644| IdemLoss: 0.01078| VQGANLoss: 0.00566| L0: 0.04760
+2025-06-20 15:17:20.926 | INFO     | __main__:<module>:476 - [R2] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.927 | INFO     | __main__:<module>:476 - [R4] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.931 | INFO     | __main__:<module>:476 - [R6] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.936 | INFO     | __main__:<module>:476 - [R13] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.937 | INFO     | __main__:<module>:476 - [R1] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.937 | INFO     | __main__:<module>:476 - [R3] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.938 | INFO     | __main__:<module>:476 - [R7] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.938 | INFO     | __main__:<module>:476 - [R5] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.938 | INFO     | __main__:<module>:476 - [R11] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.939 | INFO     | __main__:<module>:476 - [R12] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.939 | INFO     | __main__:<module>:476 - [R15] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.941 | INFO     | __main__:<module>:476 - [R9] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.942 | INFO     | __main__:<module>:476 - [R14] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.942 | INFO     | __main__:<module>:476 - [R10] End of epoch 1, last log step is #1
+2025-06-20 15:17:20.945 | INFO     | __main__:<module>:476 - [R8] End of epoch 1, last log step is #1
+2025-06-20 15:17:21.502 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.83547, DEC L2 Distance: 0.15087
+2025-06-20 15:17:21.597 | INFO     | __main__:<module>:476 - [R0] End of epoch 1, last log step is #16
+2025-06-20 15:17:21.597 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 1
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R9] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R11] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R1] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R8] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R10] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R2] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R12] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R13] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R3] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R14] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R4] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R15] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R5] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R6] Epoch 2/10 Validation
+2025-06-20 15:17:21.598 | INFO     | __main__:<module>:389 - [R7] Epoch 2/10 Validation
+2025-06-20 15:17:24.994 | INFO     | __main__:<module>:389 - [R0] Epoch 2/10 Validation
+2025-06-20 15:17:34.431 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01622| IdemLoss: 0.01081| VQGANLoss: 0.00541| L0: 0.04819
+2025-06-20 15:17:44.025 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_90| Loss: 0.01963| IdemLoss: 0.01422| VQGANLoss: 0.00541| L0: 0.09828
+2025-06-20 15:17:53.588 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_80| Loss: 0.02286| IdemLoss: 0.01745| VQGANLoss: 0.00541| L0: 0.14131
+2025-06-20 15:18:03.166 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_70| Loss: 0.02640| IdemLoss: 0.02099| VQGANLoss: 0.00541| L0: 0.18252
+2025-06-20 15:18:12.162 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_1| Loss: 0.01626| IdemLoss: 0.01085| VQGANLoss: 0.00541| L0: 0.04878
+2025-06-20 15:18:21.163 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_3| Loss: 0.02392| IdemLoss: 0.01850| VQGANLoss: 0.00541| L0: 0.17301
+2025-06-20 15:18:30.319 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.005| Loss: 0.01873| IdemLoss: 0.01331| VQGANLoss: 0.00541| L0: 0.08013
+2025-06-20 15:18:39.309 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.01| Loss: 0.02410| IdemLoss: 0.01869| VQGANLoss: 0.00541| L0: 0.13252
+2025-06-20 15:18:48.317 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.015| Loss: 0.03019| IdemLoss: 0.02478| VQGANLoss: 0.00541| L0: 0.18519
+2025-06-20 15:18:57.329 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.02| Loss: 0.03642| IdemLoss: 0.03101| VQGANLoss: 0.00541| L0: 0.23772
+2025-06-20 15:19:06.333 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.0| Loss: 0.01626| IdemLoss: 0.01085| VQGANLoss: 0.00541| L0: 0.04878
+2025-06-20 15:19:15.335 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.1| Loss: 0.02509| IdemLoss: 0.01968| VQGANLoss: 0.00541| L0: 0.13638
+2025-06-20 15:19:24.337 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.2| Loss: 0.04356| IdemLoss: 0.03815| VQGANLoss: 0.00541| L0: 0.31252
+2025-06-20 15:19:33.397 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.03466| IdemLoss: 0.02924| VQGANLoss: 0.00541| L0: 0.45899
+2025-06-20 15:19:42.438 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.03464| IdemLoss: 0.02922| VQGANLoss: 0.00541| L0: 0.45900
+2025-06-20 15:19:51.416 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.03868| IdemLoss: 0.03327| VQGANLoss: 0.00541| L0: 0.60006
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R6] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R10] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R3] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R11] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R7] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R12] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R2] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R13] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R4] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R15] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R5] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R8] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R1] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R9] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.425 | INFO     | __main__:<module>:398 - [R14] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:00.427 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.05587| IdemLoss: 0.05046| VQGANLoss: 0.00541| L0: 0.42608
+2025-06-20 15:20:00.439 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 0.83547, DEC L2 Distance: 0.15087
+2025-06-20 15:20:00.441 | INFO     | __main__:<module>:398 - [R0] Epoch 2/10 Training - 742 batches
+2025-06-20 15:20:26.585 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=16) (lr=0.00009)| Loss: 0.02087| IdemLoss: 0.01575| VQGANLoss: 0.00513| L0: 0.14188
+2025-06-20 15:20:27.365 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.87158, DEC L2 Distance: 0.15019
+2025-06-20 15:20:52.903 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=17) (lr=0.00009)| Loss: 0.02054| IdemLoss: 0.01485| VQGANLoss: 0.00570| L0: 0.13656
+2025-06-20 15:20:53.582 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.90239, DEC L2 Distance: 0.15178
+2025-06-20 15:21:19.164 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=18) (lr=0.00009)| Loss: 0.01969| IdemLoss: 0.01415| VQGANLoss: 0.00554| L0: 0.12111
+2025-06-20 15:21:19.941 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.93038, DEC L2 Distance: 0.15442
+2025-06-20 15:21:45.458 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=19) (lr=0.00009)| Loss: 0.01942| IdemLoss: 0.01459| VQGANLoss: 0.00484| L0: 0.13978
+2025-06-20 15:21:46.249 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.95541, DEC L2 Distance: 0.15342
+2025-06-20 15:22:11.761 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=20) (lr=0.00009)| Loss: 0.02123| IdemLoss: 0.01466| VQGANLoss: 0.00657| L0: 0.13498
+2025-06-20 15:22:12.434 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 0.98973, DEC L2 Distance: 0.16469
+2025-06-20 15:22:37.982 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=21) (lr=0.00009)| Loss: 0.01985| IdemLoss: 0.01436| VQGANLoss: 0.00549| L0: 0.13251
+2025-06-20 15:22:38.717 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.01352, DEC L2 Distance: 0.16349
+2025-06-20 15:23:04.242 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=22) (lr=0.00009)| Loss: 0.01981| IdemLoss: 0.01460| VQGANLoss: 0.00521| L0: 0.13843
+2025-06-20 15:23:04.889 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.03600, DEC L2 Distance: 0.16213
+2025-06-20 15:23:30.492 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=23) (lr=0.00009)| Loss: 0.01967| IdemLoss: 0.01436| VQGANLoss: 0.00531| L0: 0.13153
+2025-06-20 15:23:31.254 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.05659, DEC L2 Distance: 0.16321
+2025-06-20 15:23:56.763 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=24) (lr=0.00009)| Loss: 0.02072| IdemLoss: 0.01441| VQGANLoss: 0.00631| L0: 0.13320
+2025-06-20 15:23:57.477 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.08084, DEC L2 Distance: 0.16956
+2025-06-20 15:24:23.022 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=25) (lr=0.00009)| Loss: 0.01886| IdemLoss: 0.01371| VQGANLoss: 0.00515| L0: 0.12977
+2025-06-20 15:24:23.780 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.10059, DEC L2 Distance: 0.16831
+2025-06-20 15:24:49.356 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=26) (lr=0.00009)| Loss: 0.01969| IdemLoss: 0.01432| VQGANLoss: 0.00537| L0: 0.14008
+2025-06-20 15:24:50.037 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.12105, DEC L2 Distance: 0.16885
+2025-06-20 15:25:15.597 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=27) (lr=0.00009)| Loss: 0.01936| IdemLoss: 0.01360| VQGANLoss: 0.00576| L0: 0.12314
+2025-06-20 15:25:16.375 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.14132, DEC L2 Distance: 0.17041
+2025-06-20 15:25:41.918 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=28) (lr=0.00009)| Loss: 0.01923| IdemLoss: 0.01371| VQGANLoss: 0.00552| L0: 0.13210
+2025-06-20 15:25:42.562 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.16291, DEC L2 Distance: 0.17182
+2025-06-20 15:26:08.124 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=29) (lr=0.00009)| Loss: 0.01845| IdemLoss: 0.01324| VQGANLoss: 0.00521| L0: 0.12724
+2025-06-20 15:26:08.755 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.18248, DEC L2 Distance: 0.17354
+2025-06-20 15:26:30.213 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=30) (lr=0.00009)| Loss: 0.02056| IdemLoss: 0.01451| VQGANLoss: 0.00605| L0: 0.14660
+2025-06-20 15:26:30.312 | INFO     | __main__:<module>:476 - [R6] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.318 | INFO     | __main__:<module>:476 - [R5] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.318 | INFO     | __main__:<module>:476 - [R3] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.318 | INFO     | __main__:<module>:476 - [R2] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.319 | INFO     | __main__:<module>:476 - [R4] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.323 | INFO     | __main__:<module>:476 - [R1] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.324 | INFO     | __main__:<module>:476 - [R8] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.325 | INFO     | __main__:<module>:476 - [R7] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.326 | INFO     | __main__:<module>:476 - [R12] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.326 | INFO     | __main__:<module>:476 - [R15] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.328 | INFO     | __main__:<module>:476 - [R11] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.330 | INFO     | __main__:<module>:476 - [R9] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.331 | INFO     | __main__:<module>:476 - [R10] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.332 | INFO     | __main__:<module>:476 - [R14] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.334 | INFO     | __main__:<module>:476 - [R13] End of epoch 2, last log step is #1
+2025-06-20 15:26:30.925 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.19931, DEC L2 Distance: 0.17699
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:476 - [R0] End of epoch 2, last log step is #31
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 2
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R1] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R8] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R2] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R9] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R3] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R10] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R4] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R5] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R7] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R11] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R12] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R13] Epoch 3/10 Validation
+2025-06-20 15:26:31.020 | INFO     | __main__:<module>:389 - [R6] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R14] Epoch 3/10 Validation
+2025-06-20 15:26:31.019 | INFO     | __main__:<module>:389 - [R15] Epoch 3/10 Validation
+2025-06-20 15:26:34.312 | INFO     | __main__:<module>:389 - [R0] Epoch 3/10 Validation
+2025-06-20 15:26:43.768 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01617| IdemLoss: 0.01060| VQGANLoss: 0.00557| L0: 0.04953
+2025-06-20 15:26:53.351 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_80| Loss: 0.02008| IdemLoss: 0.01451| VQGANLoss: 0.00557| L0: 0.10805
+2025-06-20 15:27:02.901 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_60| Loss: 0.02584| IdemLoss: 0.02027| VQGANLoss: 0.00557| L0: 0.17872
+2025-06-20 15:27:12.448 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_40| Loss: 0.03276| IdemLoss: 0.02719| VQGANLoss: 0.00557| L0: 0.25393
+2025-06-20 15:27:21.462 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_3| Loss: 0.02016| IdemLoss: 0.01459| VQGANLoss: 0.00557| L0: 0.11070
+2025-06-20 15:27:30.479 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_5| Loss: 0.02730| IdemLoss: 0.02173| VQGANLoss: 0.00557| L0: 0.22509
+2025-06-20 15:27:39.491 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.02| Loss: 0.02180| IdemLoss: 0.01623| VQGANLoss: 0.00557| L0: 0.13419
+2025-06-20 15:27:48.518 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.04| Loss: 0.03276| IdemLoss: 0.02719| VQGANLoss: 0.00557| L0: 0.26318
+2025-06-20 15:27:57.546 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.06| Loss: 0.04686| IdemLoss: 0.04129| VQGANLoss: 0.00557| L0: 0.39425
+2025-06-20 15:28:06.550 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.2| Loss: 0.03828| IdemLoss: 0.03271| VQGANLoss: 0.00557| L0: 0.27349
+2025-06-20 15:28:15.558 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.3| Loss: 0.06005| IdemLoss: 0.05448| VQGANLoss: 0.00557| L0: 0.43045
+2025-06-20 15:28:24.573 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.4| Loss: 0.08552| IdemLoss: 0.07995| VQGANLoss: 0.00557| L0: 0.55474
+2025-06-20 15:28:33.608 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-3| Loss: 0.16455| IdemLoss: 0.15898| VQGANLoss: 0.00557| L0: 0.85571
+2025-06-20 15:28:42.679 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-2| Loss: 0.07810| IdemLoss: 0.07253| VQGANLoss: 0.00557| L0: 0.72763
+2025-06-20 15:28:51.750 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.03147| IdemLoss: 0.02590| VQGANLoss: 0.00557| L0: 0.42786
+2025-06-20 15:29:00.809 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.03146| IdemLoss: 0.02589| VQGANLoss: 0.00557| L0: 0.42636
+2025-06-20 15:29:09.860 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_2| Loss: 0.07803| IdemLoss: 0.07246| VQGANLoss: 0.00557| L0: 0.72642
+2025-06-20 15:29:18.920 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_3| Loss: 0.16362| IdemLoss: 0.15805| VQGANLoss: 0.00557| L0: 0.85474
+2025-06-20 15:29:27.899 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.5| Loss: 0.09339| IdemLoss: 0.08782| VQGANLoss: 0.00557| L0: 0.86023
+2025-06-20 15:29:36.881 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.6| Loss: 0.03205| IdemLoss: 0.02648| VQGANLoss: 0.00557| L0: 0.75987
+2025-06-20 15:29:45.871 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.7| Loss: 0.04624| IdemLoss: 0.04067| VQGANLoss: 0.00557| L0: 0.64323
+2025-06-20 15:29:54.877 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.02031| IdemLoss: 0.01474| VQGANLoss: 0.00557| L0: 0.48970
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R8] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R9] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R4] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R11] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R6] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R1] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R3] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R12] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R13] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R5] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R15] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R7] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R10] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R2] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.877 | INFO     | __main__:<module>:398 - [R14] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:03.880 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.02171| IdemLoss: 0.01615| VQGANLoss: 0.00557| L0: 0.32524
+2025-06-20 15:30:03.892 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 1.19931, DEC L2 Distance: 0.17699
+2025-06-20 15:30:03.894 | INFO     | __main__:<module>:398 - [R0] Epoch 3/10 Training - 742 batches
+2025-06-20 15:30:29.954 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=31) (lr=0.00008)| Loss: 0.02902| IdemLoss: 0.02330| VQGANLoss: 0.00572| L0: 0.21038
+2025-06-20 15:30:30.706 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.22650, DEC L2 Distance: 0.17844
+2025-06-20 15:30:56.232 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=32) (lr=0.00008)| Loss: 0.02762| IdemLoss: 0.02205| VQGANLoss: 0.00557| L0: 0.20526
+2025-06-20 15:30:56.946 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.25082, DEC L2 Distance: 0.17861
+2025-06-20 15:31:22.502 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=33) (lr=0.00008)| Loss: 0.02768| IdemLoss: 0.02196| VQGANLoss: 0.00573| L0: 0.18975
+2025-06-20 15:31:23.335 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.27233, DEC L2 Distance: 0.18065
+2025-06-20 15:31:48.825 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=34) (lr=0.00008)| Loss: 0.02818| IdemLoss: 0.02177| VQGANLoss: 0.00641| L0: 0.19639
+2025-06-20 15:31:49.626 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.29308, DEC L2 Distance: 0.18781
+2025-06-20 15:32:15.146 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=35) (lr=0.00008)| Loss: 0.03178| IdemLoss: 0.02288| VQGANLoss: 0.00890| L0: 0.20751
+2025-06-20 15:32:15.843 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.31804, DEC L2 Distance: 0.19945
+2025-06-20 15:32:41.349 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=36) (lr=0.00008)| Loss: 0.02900| IdemLoss: 0.02268| VQGANLoss: 0.00632| L0: 0.20018
+2025-06-20 15:32:42.066 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.33609, DEC L2 Distance: 0.19644
+2025-06-20 15:33:07.526 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=37) (lr=0.00008)| Loss: 0.02675| IdemLoss: 0.02044| VQGANLoss: 0.00631| L0: 0.18051
+2025-06-20 15:33:08.298 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.35537, DEC L2 Distance: 0.19718
+2025-06-20 15:33:33.796 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=38) (lr=0.00008)| Loss: 0.02634| IdemLoss: 0.02064| VQGANLoss: 0.00570| L0: 0.18590
+2025-06-20 15:33:34.502 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.37100, DEC L2 Distance: 0.19536
+2025-06-20 15:33:59.989 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=39) (lr=0.00008)| Loss: 0.02739| IdemLoss: 0.02122| VQGANLoss: 0.00617| L0: 0.18941
+2025-06-20 15:34:00.795 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.38717, DEC L2 Distance: 0.19634
+2025-06-20 15:34:26.363 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=40) (lr=0.00008)| Loss: 0.03225| IdemLoss: 0.02567| VQGANLoss: 0.00659| L0: 0.22381
+2025-06-20 15:34:27.108 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.40676, DEC L2 Distance: 0.19802
+2025-06-20 15:34:52.652 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=41) (lr=0.00008)| Loss: 0.02807| IdemLoss: 0.02210| VQGANLoss: 0.00597| L0: 0.19430
+2025-06-20 15:34:53.346 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.42367, DEC L2 Distance: 0.19931
+2025-06-20 15:35:18.850 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=42) (lr=0.00008)| Loss: 0.02839| IdemLoss: 0.02217| VQGANLoss: 0.00623| L0: 0.20917
+2025-06-20 15:35:19.664 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.44103, DEC L2 Distance: 0.20182
+2025-06-20 15:35:45.188 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=43) (lr=0.00008)| Loss: 0.02911| IdemLoss: 0.02326| VQGANLoss: 0.00585| L0: 0.21147
+2025-06-20 15:35:45.852 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.45659, DEC L2 Distance: 0.20092
+2025-06-20 15:36:11.348 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=44) (lr=0.00008)| Loss: 0.02815| IdemLoss: 0.02220| VQGANLoss: 0.00595| L0: 0.20005
+2025-06-20 15:36:12.064 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.47273, DEC L2 Distance: 0.20211
+2025-06-20 15:36:33.466 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=45) (lr=0.00008)| Loss: 0.02918| IdemLoss: 0.02311| VQGANLoss: 0.00607| L0: 0.19767
+2025-06-20 15:36:33.568 | INFO     | __main__:<module>:476 - [R6] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.570 | INFO     | __main__:<module>:476 - [R3] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.572 | INFO     | __main__:<module>:476 - [R2] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.572 | INFO     | __main__:<module>:476 - [R4] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.574 | INFO     | __main__:<module>:476 - [R13] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.575 | INFO     | __main__:<module>:476 - [R7] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.577 | INFO     | __main__:<module>:476 - [R14] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.580 | INFO     | __main__:<module>:476 - [R5] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.581 | INFO     | __main__:<module>:476 - [R1] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.583 | INFO     | __main__:<module>:476 - [R12] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.586 | INFO     | __main__:<module>:476 - [R9] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.586 | INFO     | __main__:<module>:476 - [R8] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.587 | INFO     | __main__:<module>:476 - [R10] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.588 | INFO     | __main__:<module>:476 - [R15] End of epoch 3, last log step is #1
+2025-06-20 15:36:33.588 | INFO     | __main__:<module>:476 - [R11] End of epoch 3, last log step is #1
+2025-06-20 15:36:34.294 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.48584, DEC L2 Distance: 0.20237
+2025-06-20 15:36:34.398 | INFO     | __main__:<module>:476 - [R0] End of epoch 3, last log step is #46
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 3
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R1] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R8] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R2] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R9] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R3] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R10] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R5] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R11] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R6] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R12] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R7] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R13] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R4] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R14] Epoch 4/10 Validation
+2025-06-20 15:36:34.399 | INFO     | __main__:<module>:389 - [R15] Epoch 4/10 Validation
+2025-06-20 15:36:37.814 | INFO     | __main__:<module>:389 - [R0] Epoch 4/10 Validation
+2025-06-20 15:36:47.309 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01716| IdemLoss: 0.01125| VQGANLoss: 0.00591| L0: 0.05765
+2025-06-20 15:36:56.851 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_80| Loss: 0.02068| IdemLoss: 0.01478| VQGANLoss: 0.00591| L0: 0.11176
+2025-06-20 15:37:06.388 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_60| Loss: 0.02539| IdemLoss: 0.01949| VQGANLoss: 0.00591| L0: 0.17230
+2025-06-20 15:37:15.907 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_40| Loss: 0.03077| IdemLoss: 0.02486| VQGANLoss: 0.00591| L0: 0.23582
+2025-06-20 15:37:24.948 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_3| Loss: 0.01894| IdemLoss: 0.01304| VQGANLoss: 0.00591| L0: 0.08221
+2025-06-20 15:37:33.974 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_5| Loss: 0.02191| IdemLoss: 0.01600| VQGANLoss: 0.00591| L0: 0.12903
+2025-06-20 15:37:42.974 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.02| Loss: 0.02133| IdemLoss: 0.01542| VQGANLoss: 0.00591| L0: 0.12107
+2025-06-20 15:37:51.998 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.04| Loss: 0.02749| IdemLoss: 0.02159| VQGANLoss: 0.00591| L0: 0.19705
+2025-06-20 15:38:01.007 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.06| Loss: 0.03491| IdemLoss: 0.02900| VQGANLoss: 0.00591| L0: 0.27701
+2025-06-20 15:38:10.005 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.2| Loss: 0.03078| IdemLoss: 0.02487| VQGANLoss: 0.00591| L0: 0.19525
+2025-06-20 15:38:19.014 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.3| Loss: 0.04443| IdemLoss: 0.03853| VQGANLoss: 0.00591| L0: 0.31166
+2025-06-20 15:38:28.012 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.4| Loss: 0.06039| IdemLoss: 0.05448| VQGANLoss: 0.00591| L0: 0.41842
+2025-06-20 15:38:37.077 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-3| Loss: 0.13888| IdemLoss: 0.13297| VQGANLoss: 0.00591| L0: 0.84901
+2025-06-20 15:38:46.133 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-2| Loss: 0.06841| IdemLoss: 0.06250| VQGANLoss: 0.00591| L0: 0.71186
+2025-06-20 15:38:55.197 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.03051| IdemLoss: 0.02460| VQGANLoss: 0.00591| L0: 0.41271
+2025-06-20 15:39:04.280 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.03048| IdemLoss: 0.02457| VQGANLoss: 0.00591| L0: 0.41172
+2025-06-20 15:39:13.345 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_2| Loss: 0.06826| IdemLoss: 0.06235| VQGANLoss: 0.00591| L0: 0.71142
+2025-06-20 15:39:22.387 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_3| Loss: 0.13814| IdemLoss: 0.13223| VQGANLoss: 0.00591| L0: 0.84921
+2025-06-20 15:39:31.365 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.5| Loss: 0.03980| IdemLoss: 0.03389| VQGANLoss: 0.00591| L0: 0.82555
+2025-06-20 15:39:40.389 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.6| Loss: 0.02554| IdemLoss: 0.01964| VQGANLoss: 0.00591| L0: 0.73567
+2025-06-20 15:39:49.378 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.7| Loss: 0.02777| IdemLoss: 0.02186| VQGANLoss: 0.00591| L0: 0.61409
+2025-06-20 15:39:58.420 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.02046| IdemLoss: 0.01455| VQGANLoss: 0.00591| L0: 0.48455
+2025-06-20 15:40:07.584 | INFO     | __main__:<module>:398 - [R11] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R1] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.584 | INFO     | __main__:<module>:398 - [R15] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R5] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R8] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R6] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.584 | INFO     | __main__:<module>:398 - [R9] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R7] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R10] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R2] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.584 | INFO     | __main__:<module>:398 - [R13] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R4] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R14] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R3] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.585 | INFO     | __main__:<module>:398 - [R12] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:07.587 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.02199| IdemLoss: 0.01609| VQGANLoss: 0.00591| L0: 0.32607
+2025-06-20 15:40:07.599 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 1.48584, DEC L2 Distance: 0.20237
+2025-06-20 15:40:07.601 | INFO     | __main__:<module>:398 - [R0] Epoch 4/10 Training - 742 batches
+2025-06-20 15:40:33.683 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=46) (lr=0.00007)| Loss: 0.02503| IdemLoss: 0.01920| VQGANLoss: 0.00583| L0: 0.17410
+2025-06-20 15:40:34.423 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.49821, DEC L2 Distance: 0.20265
+2025-06-20 15:40:59.943 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=47) (lr=0.00007)| Loss: 0.02661| IdemLoss: 0.02074| VQGANLoss: 0.00587| L0: 0.18250
+2025-06-20 15:41:00.721 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.51132, DEC L2 Distance: 0.20349
+2025-06-20 15:41:26.288 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=48) (lr=0.00007)| Loss: 0.02666| IdemLoss: 0.02111| VQGANLoss: 0.00555| L0: 0.19613
+2025-06-20 15:41:26.888 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.52430, DEC L2 Distance: 0.20330
+2025-06-20 15:41:52.384 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=49) (lr=0.00007)| Loss: 0.02802| IdemLoss: 0.02253| VQGANLoss: 0.00549| L0: 0.19640
+2025-06-20 15:41:53.087 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.54063, DEC L2 Distance: 0.20519
+2025-06-20 15:42:18.563 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=50) (lr=0.00007)| Loss: 0.02535| IdemLoss: 0.01940| VQGANLoss: 0.00595| L0: 0.17726
+2025-06-20 15:42:19.321 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.55413, DEC L2 Distance: 0.20535
+2025-06-20 15:42:44.804 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=51) (lr=0.00007)| Loss: 0.02626| IdemLoss: 0.02080| VQGANLoss: 0.00547| L0: 0.19884
+2025-06-20 15:42:45.522 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.56838, DEC L2 Distance: 0.20548
+2025-06-20 15:43:11.016 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=52) (lr=0.00007)| Loss: 0.02586| IdemLoss: 0.02030| VQGANLoss: 0.00556| L0: 0.19227
+2025-06-20 15:43:11.706 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.58260, DEC L2 Distance: 0.20510
+2025-06-20 15:43:37.227 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=53) (lr=0.00007)| Loss: 0.02467| IdemLoss: 0.01938| VQGANLoss: 0.00529| L0: 0.18990
+2025-06-20 15:43:37.906 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.59499, DEC L2 Distance: 0.20482
+2025-06-20 15:44:03.441 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=54) (lr=0.00007)| Loss: 0.02539| IdemLoss: 0.01993| VQGANLoss: 0.00546| L0: 0.18588
+2025-06-20 15:44:04.174 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.60712, DEC L2 Distance: 0.20562
+2025-06-20 15:44:29.655 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=55) (lr=0.00007)| Loss: 0.02508| IdemLoss: 0.01955| VQGANLoss: 0.00553| L0: 0.18323
+2025-06-20 15:44:30.319 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.62152, DEC L2 Distance: 0.20848
+2025-06-20 15:44:55.892 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=56) (lr=0.00007)| Loss: 0.02515| IdemLoss: 0.01980| VQGANLoss: 0.00535| L0: 0.20102
+2025-06-20 15:44:56.646 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.63436, DEC L2 Distance: 0.20795
+2025-06-20 15:45:22.172 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=57) (lr=0.00007)| Loss: 0.02290| IdemLoss: 0.01815| VQGANLoss: 0.00475| L0: 0.16657
+2025-06-20 15:45:22.850 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.64511, DEC L2 Distance: 0.20632
+2025-06-20 15:45:48.394 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=58) (lr=0.00007)| Loss: 0.02541| IdemLoss: 0.02016| VQGANLoss: 0.00525| L0: 0.18163
+2025-06-20 15:45:49.130 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.66010, DEC L2 Distance: 0.20701
+2025-06-20 15:46:14.671 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=59) (lr=0.00007)| Loss: 0.02306| IdemLoss: 0.01826| VQGANLoss: 0.00480| L0: 0.16555
+2025-06-20 15:46:15.461 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.67029, DEC L2 Distance: 0.20607
+2025-06-20 15:46:36.897 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=60) (lr=0.00007)| Loss: 0.02432| IdemLoss: 0.01939| VQGANLoss: 0.00494| L0: 0.18170
+2025-06-20 15:46:36.997 | INFO     | __main__:<module>:476 - [R4] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.003 | INFO     | __main__:<module>:476 - [R5] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.003 | INFO     | __main__:<module>:476 - [R3] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.006 | INFO     | __main__:<module>:476 - [R2] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.008 | INFO     | __main__:<module>:476 - [R6] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.011 | INFO     | __main__:<module>:476 - [R1] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.011 | INFO     | __main__:<module>:476 - [R11] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.012 | INFO     | __main__:<module>:476 - [R8] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.013 | INFO     | __main__:<module>:476 - [R7] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.015 | INFO     | __main__:<module>:476 - [R15] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.018 | INFO     | __main__:<module>:476 - [R9] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.018 | INFO     | __main__:<module>:476 - [R10] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.019 | INFO     | __main__:<module>:476 - [R14] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.019 | INFO     | __main__:<module>:476 - [R13] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.019 | INFO     | __main__:<module>:476 - [R12] End of epoch 4, last log step is #1
+2025-06-20 15:46:37.673 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.68225, DEC L2 Distance: 0.20693
+2025-06-20 15:46:37.772 | INFO     | __main__:<module>:476 - [R0] End of epoch 4, last log step is #61
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 4
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R1] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R8] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R2] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R4] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R9] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R6] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R10] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R7] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R11] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R3] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R12] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R5] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R14] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R15] Epoch 5/10 Validation
+2025-06-20 15:46:37.773 | INFO     | __main__:<module>:389 - [R13] Epoch 5/10 Validation
+2025-06-20 15:46:41.150 | INFO     | __main__:<module>:389 - [R0] Epoch 5/10 Validation
+2025-06-20 15:46:50.627 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01655| IdemLoss: 0.01082| VQGANLoss: 0.00573| L0: 0.05093
+2025-06-20 15:47:00.166 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_80| Loss: 0.02007| IdemLoss: 0.01434| VQGANLoss: 0.00573| L0: 0.10578
+2025-06-20 15:47:09.688 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_60| Loss: 0.02419| IdemLoss: 0.01846| VQGANLoss: 0.00573| L0: 0.16208
+2025-06-20 15:47:19.205 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_40| Loss: 0.02912| IdemLoss: 0.02340| VQGANLoss: 0.00573| L0: 0.22294
+2025-06-20 15:47:28.226 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_3| Loss: 0.01826| IdemLoss: 0.01253| VQGANLoss: 0.00573| L0: 0.07450
+2025-06-20 15:47:37.247 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_5| Loss: 0.02043| IdemLoss: 0.01471| VQGANLoss: 0.00573| L0: 0.10836
+2025-06-20 15:47:46.256 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.02| Loss: 0.02072| IdemLoss: 0.01500| VQGANLoss: 0.00573| L0: 0.11560
+2025-06-20 15:47:55.291 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.04| Loss: 0.02675| IdemLoss: 0.02102| VQGANLoss: 0.00573| L0: 0.19134
+2025-06-20 15:48:04.295 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.06| Loss: 0.03358| IdemLoss: 0.02786| VQGANLoss: 0.00573| L0: 0.26711
+2025-06-20 15:48:13.302 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.2| Loss: 0.03078| IdemLoss: 0.02506| VQGANLoss: 0.00573| L0: 0.19545
+2025-06-20 15:48:22.313 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.3| Loss: 0.04111| IdemLoss: 0.03538| VQGANLoss: 0.00573| L0: 0.27880
+2025-06-20 15:48:31.319 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.4| Loss: 0.05292| IdemLoss: 0.04719| VQGANLoss: 0.00573| L0: 0.35987
+2025-06-20 15:48:40.356 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-3| Loss: 0.11624| IdemLoss: 0.11051| VQGANLoss: 0.00573| L0: 0.82058
+2025-06-20 15:48:49.410 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-2| Loss: 0.05744| IdemLoss: 0.05172| VQGANLoss: 0.00573| L0: 0.66219
+2025-06-20 15:48:58.486 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.02749| IdemLoss: 0.02176| VQGANLoss: 0.00573| L0: 0.37114
+2025-06-20 15:49:07.556 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.02783| IdemLoss: 0.02210| VQGANLoss: 0.00573| L0: 0.37386
+2025-06-20 15:49:16.600 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_2| Loss: 0.05861| IdemLoss: 0.05288| VQGANLoss: 0.00573| L0: 0.66550
+2025-06-20 15:49:25.646 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_3| Loss: 0.11819| IdemLoss: 0.11246| VQGANLoss: 0.00573| L0: 0.82251
+2025-06-20 15:49:34.616 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.5| Loss: 0.03819| IdemLoss: 0.03246| VQGANLoss: 0.00573| L0: 0.81977
+2025-06-20 15:49:43.596 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.6| Loss: 0.02466| IdemLoss: 0.01894| VQGANLoss: 0.00573| L0: 0.73102
+2025-06-20 15:49:52.590 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.7| Loss: 0.02740| IdemLoss: 0.02167| VQGANLoss: 0.00573| L0: 0.61086
+2025-06-20 15:50:01.593 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.02000| IdemLoss: 0.01427| VQGANLoss: 0.00573| L0: 0.47910
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R8] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R9] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R2] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R11] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R12] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R13] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R15] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R3] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R14] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R6] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R1] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R4] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R5] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R7] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.632 | INFO     | __main__:<module>:398 - [R10] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:10.634 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.02163| IdemLoss: 0.01590| VQGANLoss: 0.00573| L0: 0.32260
+2025-06-20 15:50:10.647 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 1.68225, DEC L2 Distance: 0.20693
+2025-06-20 15:50:10.649 | INFO     | __main__:<module>:398 - [R0] Epoch 5/10 Training - 742 batches
+2025-06-20 15:50:36.761 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=61) (lr=0.00007)| Loss: 0.02391| IdemLoss: 0.01878| VQGANLoss: 0.00512| L0: 0.17858
+2025-06-20 15:50:37.471 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.69372, DEC L2 Distance: 0.20720
+2025-06-20 15:51:02.982 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=62) (lr=0.00007)| Loss: 0.02440| IdemLoss: 0.01944| VQGANLoss: 0.00495| L0: 0.18304
+2025-06-20 15:51:03.714 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.70528, DEC L2 Distance: 0.20667
+2025-06-20 15:51:29.286 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=63) (lr=0.00007)| Loss: 0.02324| IdemLoss: 0.01837| VQGANLoss: 0.00487| L0: 0.17957
+2025-06-20 15:51:30.035 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.71779, DEC L2 Distance: 0.20661
+2025-06-20 15:51:55.522 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=64) (lr=0.00007)| Loss: 0.02465| IdemLoss: 0.01971| VQGANLoss: 0.00494| L0: 0.18797
+2025-06-20 15:51:56.236 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.73138, DEC L2 Distance: 0.20715
+2025-06-20 15:52:21.728 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=65) (lr=0.00007)| Loss: 0.02295| IdemLoss: 0.01816| VQGANLoss: 0.00479| L0: 0.17089
+2025-06-20 15:52:22.467 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.74350, DEC L2 Distance: 0.20718
+2025-06-20 15:52:47.990 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=66) (lr=0.00007)| Loss: 0.02350| IdemLoss: 0.01892| VQGANLoss: 0.00457| L0: 0.17563
+2025-06-20 15:52:48.715 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.75665, DEC L2 Distance: 0.20703
+2025-06-20 15:53:14.258 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=67) (lr=0.00007)| Loss: 0.02354| IdemLoss: 0.01863| VQGANLoss: 0.00491| L0: 0.17404
+2025-06-20 15:53:14.934 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.76902, DEC L2 Distance: 0.20771
+2025-06-20 15:53:40.480 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=68) (lr=0.00007)| Loss: 0.02283| IdemLoss: 0.01788| VQGANLoss: 0.00495| L0: 0.17166
+2025-06-20 15:53:41.281 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.78028, DEC L2 Distance: 0.20869
+2025-06-20 15:54:06.815 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=69) (lr=0.00007)| Loss: 0.02377| IdemLoss: 0.01873| VQGANLoss: 0.00504| L0: 0.18401
+2025-06-20 15:54:07.591 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.79392, DEC L2 Distance: 0.20972
+2025-06-20 15:54:33.131 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=70) (lr=0.00007)| Loss: 0.02311| IdemLoss: 0.01837| VQGANLoss: 0.00474| L0: 0.17166
+2025-06-20 15:54:33.780 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.80685, DEC L2 Distance: 0.20891
+2025-06-20 15:54:59.326 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=71) (lr=0.00007)| Loss: 0.02215| IdemLoss: 0.01786| VQGANLoss: 0.00429| L0: 0.17133
+2025-06-20 15:55:00.006 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.82004, DEC L2 Distance: 0.20822
+2025-06-20 15:55:25.574 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=72) (lr=0.00007)| Loss: 0.02229| IdemLoss: 0.01767| VQGANLoss: 0.00462| L0: 0.17389
+2025-06-20 15:55:26.307 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.83273, DEC L2 Distance: 0.20924
+2025-06-20 15:55:51.831 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=73) (lr=0.00007)| Loss: 0.02176| IdemLoss: 0.01695| VQGANLoss: 0.00481| L0: 0.16705
+2025-06-20 15:55:52.469 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.84666, DEC L2 Distance: 0.20971
+2025-06-20 15:56:18.035 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=74) (lr=0.00007)| Loss: 0.02310| IdemLoss: 0.01820| VQGANLoss: 0.00490| L0: 0.19362
+2025-06-20 15:56:18.744 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.85927, DEC L2 Distance: 0.21055
+2025-06-20 15:56:40.209 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=75) (lr=0.00007)| Loss: 0.02319| IdemLoss: 0.01843| VQGANLoss: 0.00476| L0: 0.18025
+2025-06-20 15:56:40.315 | INFO     | __main__:<module>:476 - [R6] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.318 | INFO     | __main__:<module>:476 - [R4] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.318 | INFO     | __main__:<module>:476 - [R2] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.318 | INFO     | __main__:<module>:476 - [R13] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.320 | INFO     | __main__:<module>:476 - [R1] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.321 | INFO     | __main__:<module>:476 - [R9] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.321 | INFO     | __main__:<module>:476 - [R5] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.321 | INFO     | __main__:<module>:476 - [R3] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.322 | INFO     | __main__:<module>:476 - [R15] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.325 | INFO     | __main__:<module>:476 - [R11] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.326 | INFO     | __main__:<module>:476 - [R7] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.330 | INFO     | __main__:<module>:476 - [R14] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.334 | INFO     | __main__:<module>:476 - [R8] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.334 | INFO     | __main__:<module>:476 - [R10] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.334 | INFO     | __main__:<module>:476 - [R12] End of epoch 5, last log step is #1
+2025-06-20 15:56:40.875 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.87149, DEC L2 Distance: 0.21118
+2025-06-20 15:56:40.982 | INFO     | __main__:<module>:476 - [R0] End of epoch 5, last log step is #76
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 5
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R8] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R9] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R2] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R10] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R4] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R1] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R3] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R5] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R6] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R7] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R11] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R12] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R13] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R14] Epoch 6/10 Validation
+2025-06-20 15:56:40.983 | INFO     | __main__:<module>:389 - [R15] Epoch 6/10 Validation
+2025-06-20 15:56:44.265 | INFO     | __main__:<module>:389 - [R0] Epoch 6/10 Validation
+2025-06-20 15:56:53.715 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01582| IdemLoss: 0.01094| VQGANLoss: 0.00488| L0: 0.05103
+2025-06-20 15:57:03.265 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_80| Loss: 0.01917| IdemLoss: 0.01429| VQGANLoss: 0.00488| L0: 0.10429
+2025-06-20 15:57:12.798 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_60| Loss: 0.02309| IdemLoss: 0.01821| VQGANLoss: 0.00488| L0: 0.15767
+2025-06-20 15:57:22.349 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_40| Loss: 0.02761| IdemLoss: 0.02274| VQGANLoss: 0.00488| L0: 0.21422
+2025-06-20 15:57:31.369 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_3| Loss: 0.01745| IdemLoss: 0.01258| VQGANLoss: 0.00488| L0: 0.07358
+2025-06-20 15:57:40.370 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_5| Loss: 0.01957| IdemLoss: 0.01470| VQGANLoss: 0.00488| L0: 0.10660
+2025-06-20 15:57:49.386 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.02| Loss: 0.01996| IdemLoss: 0.01508| VQGANLoss: 0.00488| L0: 0.11581
+2025-06-20 15:57:58.402 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.04| Loss: 0.02574| IdemLoss: 0.02086| VQGANLoss: 0.00488| L0: 0.18755
+2025-06-20 15:58:07.421 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.06| Loss: 0.03225| IdemLoss: 0.02737| VQGANLoss: 0.00488| L0: 0.26098
+2025-06-20 15:58:16.449 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.2| Loss: 0.02888| IdemLoss: 0.02400| VQGANLoss: 0.00488| L0: 0.18803
+2025-06-20 15:58:25.458 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.3| Loss: 0.03806| IdemLoss: 0.03319| VQGANLoss: 0.00488| L0: 0.25539
+2025-06-20 15:58:34.468 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.4| Loss: 0.04919| IdemLoss: 0.04431| VQGANLoss: 0.00488| L0: 0.32908
+2025-06-20 15:58:43.528 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-3| Loss: 0.06896| IdemLoss: 0.06408| VQGANLoss: 0.00488| L0: 0.72182
+2025-06-20 15:58:52.581 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-2| Loss: 0.03863| IdemLoss: 0.03375| VQGANLoss: 0.00488| L0: 0.53601
+2025-06-20 15:59:01.646 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.02368| IdemLoss: 0.01880| VQGANLoss: 0.00488| L0: 0.31618
+2025-06-20 15:59:10.696 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.02366| IdemLoss: 0.01878| VQGANLoss: 0.00488| L0: 0.31289
+2025-06-20 15:59:19.746 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_2| Loss: 0.03815| IdemLoss: 0.03328| VQGANLoss: 0.00488| L0: 0.53143
+2025-06-20 15:59:28.781 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_3| Loss: 0.06799| IdemLoss: 0.06311| VQGANLoss: 0.00488| L0: 0.71801
+2025-06-20 15:59:37.756 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.5| Loss: 0.03855| IdemLoss: 0.03368| VQGANLoss: 0.00488| L0: 0.82293
+2025-06-20 15:59:46.729 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.6| Loss: 0.02389| IdemLoss: 0.01902| VQGANLoss: 0.00488| L0: 0.73032
+2025-06-20 15:59:55.711 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.7| Loss: 0.02699| IdemLoss: 0.02212| VQGANLoss: 0.00488| L0: 0.61188
+2025-06-20 16:00:04.706 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.01945| IdemLoss: 0.01458| VQGANLoss: 0.00488| L0: 0.47961
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R11] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R15] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R8] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R9] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R10] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R12] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R13] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R14] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R3] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R5] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R7] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R1] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R2] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R6] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.721 | INFO     | __main__:<module>:398 - [R4] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:13.727 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.02125| IdemLoss: 0.01637| VQGANLoss: 0.00488| L0: 0.32576
+2025-06-20 16:00:13.740 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 1.87149, DEC L2 Distance: 0.21118
+2025-06-20 16:00:13.742 | INFO     | __main__:<module>:398 - [R0] Epoch 6/10 Training - 742 batches
+2025-06-20 16:00:40.115 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=76) (lr=0.00006)| Loss: 0.02137| IdemLoss: 0.01704| VQGANLoss: 0.00433| L0: 0.17215
+2025-06-20 16:00:40.900 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.88406, DEC L2 Distance: 0.21029
+2025-06-20 16:01:08.014 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=77) (lr=0.00006)| Loss: 0.02230| IdemLoss: 0.01801| VQGANLoss: 0.00429| L0: 0.18771
+2025-06-20 16:01:08.698 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.89493, DEC L2 Distance: 0.20992
+2025-06-20 16:01:34.223 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=78) (lr=0.00006)| Loss: 0.02071| IdemLoss: 0.01657| VQGANLoss: 0.00414| L0: 0.16769
+2025-06-20 16:01:34.927 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.90609, DEC L2 Distance: 0.20929
+2025-06-20 16:02:00.415 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=79) (lr=0.00006)| Loss: 0.01993| IdemLoss: 0.01570| VQGANLoss: 0.00423| L0: 0.15205
+2025-06-20 16:02:01.132 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.91536, DEC L2 Distance: 0.20896
+2025-06-20 16:02:26.646 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=80) (lr=0.00006)| Loss: 0.02079| IdemLoss: 0.01652| VQGANLoss: 0.00427| L0: 0.16064
+2025-06-20 16:02:27.352 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.92405, DEC L2 Distance: 0.20884
+2025-06-20 16:02:52.907 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=81) (lr=0.00006)| Loss: 0.02000| IdemLoss: 0.01548| VQGANLoss: 0.00451| L0: 0.15113
+2025-06-20 16:02:53.668 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.93197, DEC L2 Distance: 0.20913
+2025-06-20 16:03:19.117 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=82) (lr=0.00006)| Loss: 0.02105| IdemLoss: 0.01675| VQGANLoss: 0.00430| L0: 0.16911
+2025-06-20 16:03:19.918 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.94150, DEC L2 Distance: 0.20902
+2025-06-20 16:03:45.463 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=83) (lr=0.00006)| Loss: 0.02134| IdemLoss: 0.01709| VQGANLoss: 0.00426| L0: 0.18037
+2025-06-20 16:03:46.131 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.95131, DEC L2 Distance: 0.20940
+2025-06-20 16:04:11.682 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=84) (lr=0.00006)| Loss: 0.02065| IdemLoss: 0.01645| VQGANLoss: 0.00420| L0: 0.16958
+2025-06-20 16:04:12.360 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.96016, DEC L2 Distance: 0.20961
+2025-06-20 16:04:37.875 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=85) (lr=0.00006)| Loss: 0.02096| IdemLoss: 0.01598| VQGANLoss: 0.00497| L0: 0.15934
+2025-06-20 16:04:38.586 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.96981, DEC L2 Distance: 0.21216
+2025-06-20 16:05:04.098 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=86) (lr=0.00006)| Loss: 0.02103| IdemLoss: 0.01582| VQGANLoss: 0.00521| L0: 0.16001
+2025-06-20 16:05:04.768 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.97878, DEC L2 Distance: 0.21379
+2025-06-20 16:05:30.271 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=87) (lr=0.00006)| Loss: 0.02052| IdemLoss: 0.01624| VQGANLoss: 0.00428| L0: 0.16914
+2025-06-20 16:05:31.002 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.98792, DEC L2 Distance: 0.21285
+2025-06-20 16:05:56.461 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=88) (lr=0.00006)| Loss: 0.02057| IdemLoss: 0.01615| VQGANLoss: 0.00441| L0: 0.17963
+2025-06-20 16:05:57.130 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 1.99655, DEC L2 Distance: 0.21390
+2025-06-20 16:06:22.694 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=89) (lr=0.00006)| Loss: 0.02117| IdemLoss: 0.01652| VQGANLoss: 0.00466| L0: 0.16939
+2025-06-20 16:06:23.393 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.00541, DEC L2 Distance: 0.21424
+2025-06-20 16:06:44.802 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=90) (lr=0.00006)| Loss: 0.01993| IdemLoss: 0.01558| VQGANLoss: 0.00435| L0: 0.14396
+2025-06-20 16:06:44.904 | INFO     | __main__:<module>:476 - [R4] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.909 | INFO     | __main__:<module>:476 - [R2] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.912 | INFO     | __main__:<module>:476 - [R6] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.919 | INFO     | __main__:<module>:476 - [R5] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.920 | INFO     | __main__:<module>:476 - [R3] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.924 | INFO     | __main__:<module>:476 - [R9] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.924 | INFO     | __main__:<module>:476 - [R11] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.926 | INFO     | __main__:<module>:476 - [R7] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.926 | INFO     | __main__:<module>:476 - [R14] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.926 | INFO     | __main__:<module>:476 - [R12] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.926 | INFO     | __main__:<module>:476 - [R8] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.927 | INFO     | __main__:<module>:476 - [R1] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.928 | INFO     | __main__:<module>:476 - [R13] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.930 | INFO     | __main__:<module>:476 - [R15] End of epoch 6, last log step is #1
+2025-06-20 16:06:44.935 | INFO     | __main__:<module>:476 - [R10] End of epoch 6, last log step is #1
+2025-06-20 16:06:45.489 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.01212, DEC L2 Distance: 0.21405
+2025-06-20 16:06:45.590 | INFO     | __main__:<module>:476 - [R0] End of epoch 6, last log step is #91
+2025-06-20 16:06:45.590 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 6
+2025-06-20 16:06:45.590 | INFO     | __main__:<module>:389 - [R1] Epoch 7/10 Validation
+2025-06-20 16:06:45.591 | INFO     | __main__:<module>:389 - [R8] Epoch 7/10 Validation
+2025-06-20 16:06:45.590 | INFO     | __main__:<module>:389 - [R2] Epoch 7/10 Validation
+2025-06-20 16:06:45.591 | INFO     | __main__:<module>:389 - [R10] Epoch 7/10 Validation
+2025-06-20 16:06:45.590 | INFO     | __main__:<module>:389 - [R3] Epoch 7/10 Validation
+2025-06-20 16:06:45.591 | INFO     | __main__:<module>:389 - [R11] Epoch 7/10 Validation
+2025-06-20 16:06:45.590 | INFO     | __main__:<module>:389 - [R4] Epoch 7/10 Validation
+2025-06-20 16:06:45.591 | INFO     | __main__:<module>:389 - [R12] Epoch 7/10 Validation
+2025-06-20 16:06:45.590 | INFO     | __main__:<module>:389 - [R5] Epoch 7/10 Validation
+2025-06-20 16:06:45.591 | INFO     | __main__:<module>:389 - [R13] Epoch 7/10 Validation
+2025-06-20 16:06:45.590 | INFO     | __main__:<module>:389 - [R6] Epoch 7/10 Validation
+2025-06-20 16:06:45.591 | INFO     | __main__:<module>:389 - [R14] Epoch 7/10 Validation
+2025-06-20 16:06:45.590 | INFO     | __main__:<module>:389 - [R7] Epoch 7/10 Validation
+2025-06-20 16:06:45.591 | INFO     | __main__:<module>:389 - [R15] Epoch 7/10 Validation
+2025-06-20 16:06:45.591 | INFO     | __main__:<module>:389 - [R9] Epoch 7/10 Validation
+2025-06-20 16:06:48.958 | INFO     | __main__:<module>:389 - [R0] Epoch 7/10 Validation
+2025-06-20 16:06:58.413 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01459| IdemLoss: 0.01040| VQGANLoss: 0.00419| L0: 0.04560
+2025-06-20 16:07:07.943 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_40| Loss: 0.02647| IdemLoss: 0.02229| VQGANLoss: 0.00419| L0: 0.20802
+2025-06-20 16:07:17.461 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_30| Loss: 0.03162| IdemLoss: 0.02744| VQGANLoss: 0.00419| L0: 0.26478
+2025-06-20 16:07:26.991 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_20| Loss: 0.04357| IdemLoss: 0.03938| VQGANLoss: 0.00419| L0: 0.37725
+2025-06-20 16:07:36.002 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_5| Loss: 0.01797| IdemLoss: 0.01378| VQGANLoss: 0.00419| L0: 0.09354
+2025-06-20 16:07:45.016 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_7| Loss: 0.02320| IdemLoss: 0.01902| VQGANLoss: 0.00419| L0: 0.17774
+2025-06-20 16:07:54.037 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_9| Loss: 0.03370| IdemLoss: 0.02951| VQGANLoss: 0.00419| L0: 0.32822
+2025-06-20 16:08:03.053 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.06| Loss: 0.03091| IdemLoss: 0.02672| VQGANLoss: 0.00419| L0: 0.25257
+2025-06-20 16:08:12.060 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.08| Loss: 0.03821| IdemLoss: 0.03403| VQGANLoss: 0.00419| L0: 0.32597
+2025-06-20 16:08:21.081 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.1| Loss: 0.04646| IdemLoss: 0.04228| VQGANLoss: 0.00419| L0: 0.39968
+2025-06-20 16:08:30.099 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.4| Loss: 0.04382| IdemLoss: 0.03964| VQGANLoss: 0.00419| L0: 0.27559
+2025-06-20 16:08:39.105 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.7| Loss: 0.08622| IdemLoss: 0.08204| VQGANLoss: 0.00419| L0: 0.50716
+2025-06-20 16:08:48.094 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_2.0| Loss: 0.13945| IdemLoss: 0.13526| VQGANLoss: 0.00419| L0: 0.68464
+2025-06-20 16:08:57.147 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-3| Loss: 0.05003| IdemLoss: 0.04585| VQGANLoss: 0.00419| L0: 0.64908
+2025-06-20 16:09:06.207 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-2| Loss: 0.03123| IdemLoss: 0.02704| VQGANLoss: 0.00419| L0: 0.47451
+2025-06-20 16:09:15.258 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.02160| IdemLoss: 0.01741| VQGANLoss: 0.00419| L0: 0.30015
+2025-06-20 16:09:24.304 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.02174| IdemLoss: 0.01755| VQGANLoss: 0.00419| L0: 0.30113
+2025-06-20 16:09:33.366 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_2| Loss: 0.03141| IdemLoss: 0.02723| VQGANLoss: 0.00419| L0: 0.47515
+2025-06-20 16:09:42.414 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_3| Loss: 0.05058| IdemLoss: 0.04639| VQGANLoss: 0.00419| L0: 0.65096
+2025-06-20 16:09:51.390 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.5| Loss: 0.03578| IdemLoss: 0.03159| VQGANLoss: 0.00419| L0: 0.81867
+2025-06-20 16:10:00.361 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.6| Loss: 0.02233| IdemLoss: 0.01815| VQGANLoss: 0.00419| L0: 0.72731
+2025-06-20 16:10:09.346 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.7| Loss: 0.02449| IdemLoss: 0.02030| VQGANLoss: 0.00419| L0: 0.60505
+2025-06-20 16:10:18.341 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.01801| IdemLoss: 0.01382| VQGANLoss: 0.00419| L0: 0.47492
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R2] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R9] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R6] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R11] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R4] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R12] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R5] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R14] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R3] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R15] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R7] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R8] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R10] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R13] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.336 | INFO     | __main__:<module>:398 - [R1] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:27.339 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.01940| IdemLoss: 0.01521| VQGANLoss: 0.00419| L0: 0.31556
+2025-06-20 16:10:27.351 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 2.01212, DEC L2 Distance: 0.21405
+2025-06-20 16:10:27.353 | INFO     | __main__:<module>:398 - [R0] Epoch 7/10 Training - 742 batches
+2025-06-20 16:10:53.477 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=91) (lr=0.00005)| Loss: 0.02651| IdemLoss: 0.02183| VQGANLoss: 0.00468| L0: 0.20393
+2025-06-20 16:10:54.158 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.02322, DEC L2 Distance: 0.21509
+2025-06-20 16:11:19.769 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=92) (lr=0.00005)| Loss: 0.02720| IdemLoss: 0.02188| VQGANLoss: 0.00532| L0: 0.19644
+2025-06-20 16:11:20.471 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.03362, DEC L2 Distance: 0.21752
+2025-06-20 16:11:46.016 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=93) (lr=0.00005)| Loss: 0.02517| IdemLoss: 0.02064| VQGANLoss: 0.00452| L0: 0.19663
+2025-06-20 16:11:46.848 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.04104, DEC L2 Distance: 0.21654
+2025-06-20 16:12:12.343 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=94) (lr=0.00005)| Loss: 0.02473| IdemLoss: 0.01991| VQGANLoss: 0.00481| L0: 0.18723
+2025-06-20 16:12:13.071 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.04907, DEC L2 Distance: 0.21713
+2025-06-20 16:12:38.621 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=95) (lr=0.00005)| Loss: 0.02491| IdemLoss: 0.02047| VQGANLoss: 0.00444| L0: 0.20177
+2025-06-20 16:12:39.338 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.05776, DEC L2 Distance: 0.21784
+2025-06-20 16:13:04.841 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=96) (lr=0.00005)| Loss: 0.02501| IdemLoss: 0.02059| VQGANLoss: 0.00442| L0: 0.20677
+2025-06-20 16:13:05.522 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.06591, DEC L2 Distance: 0.21788
+2025-06-20 16:13:31.004 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=97) (lr=0.00005)| Loss: 0.02526| IdemLoss: 0.02030| VQGANLoss: 0.00497| L0: 0.18735
+2025-06-20 16:13:31.678 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.07308, DEC L2 Distance: 0.21931
+2025-06-20 16:13:57.229 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=98) (lr=0.00005)| Loss: 0.02713| IdemLoss: 0.02200| VQGANLoss: 0.00513| L0: 0.21496
+2025-06-20 16:13:58.014 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.08118, DEC L2 Distance: 0.22138
+2025-06-20 16:14:23.589 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=99) (lr=0.00005)| Loss: 0.02795| IdemLoss: 0.02208| VQGANLoss: 0.00587| L0: 0.21300
+2025-06-20 16:14:24.276 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.08947, DEC L2 Distance: 0.22288
+2025-06-20 16:14:49.827 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=100) (lr=0.00005)| Loss: 0.02585| IdemLoss: 0.02081| VQGANLoss: 0.00505| L0: 0.20573
+2025-06-20 16:14:50.523 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.09722, DEC L2 Distance: 0.22302
+2025-06-20 16:15:16.071 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=101) (lr=0.00005)| Loss: 0.02560| IdemLoss: 0.02098| VQGANLoss: 0.00462| L0: 0.21922
+2025-06-20 16:15:16.727 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.10522, DEC L2 Distance: 0.22275
+2025-06-20 16:15:42.325 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=102) (lr=0.00005)| Loss: 0.02286| IdemLoss: 0.01848| VQGANLoss: 0.00438| L0: 0.17934
+2025-06-20 16:15:43.133 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.11151, DEC L2 Distance: 0.22284
+2025-06-20 16:16:08.665 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=103) (lr=0.00005)| Loss: 0.02686| IdemLoss: 0.02148| VQGANLoss: 0.00538| L0: 0.19549
+2025-06-20 16:16:09.394 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.11895, DEC L2 Distance: 0.22551
+2025-06-20 16:16:34.965 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=104) (lr=0.00005)| Loss: 0.02404| IdemLoss: 0.01944| VQGANLoss: 0.00460| L0: 0.19050
+2025-06-20 16:16:35.823 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.12625, DEC L2 Distance: 0.22465
+2025-06-20 16:16:57.265 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=105) (lr=0.00005)| Loss: 0.02420| IdemLoss: 0.01959| VQGANLoss: 0.00461| L0: 0.19060
+2025-06-20 16:16:57.367 | INFO     | __main__:<module>:476 - [R6] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.371 | INFO     | __main__:<module>:476 - [R2] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.376 | INFO     | __main__:<module>:476 - [R3] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.377 | INFO     | __main__:<module>:476 - [R9] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.377 | INFO     | __main__:<module>:476 - [R4] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.377 | INFO     | __main__:<module>:476 - [R5] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.378 | INFO     | __main__:<module>:476 - [R10] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.378 | INFO     | __main__:<module>:476 - [R1] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.381 | INFO     | __main__:<module>:476 - [R15] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.382 | INFO     | __main__:<module>:476 - [R7] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.383 | INFO     | __main__:<module>:476 - [R12] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.383 | INFO     | __main__:<module>:476 - [R14] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.386 | INFO     | __main__:<module>:476 - [R11] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.387 | INFO     | __main__:<module>:476 - [R13] End of epoch 7, last log step is #1
+2025-06-20 16:16:57.391 | INFO     | __main__:<module>:476 - [R8] End of epoch 7, last log step is #1
+2025-06-20 16:16:58.049 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.13184, DEC L2 Distance: 0.22447
+2025-06-20 16:16:58.152 | INFO     | __main__:<module>:476 - [R0] End of epoch 7, last log step is #106
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 7
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R2] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R11] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R14] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R6] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R15] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R3] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R5] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R7] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R8] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R9] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R4] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R10] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R12] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R13] Epoch 8/10 Validation
+2025-06-20 16:16:58.153 | INFO     | __main__:<module>:389 - [R1] Epoch 8/10 Validation
+2025-06-20 16:17:01.467 | INFO     | __main__:<module>:389 - [R0] Epoch 8/10 Validation
+2025-06-20 16:17:10.952 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01503| IdemLoss: 0.01033| VQGANLoss: 0.00470| L0: 0.04462
+2025-06-20 16:17:20.477 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_40| Loss: 0.02547| IdemLoss: 0.02076| VQGANLoss: 0.00470| L0: 0.18988
+2025-06-20 16:17:29.997 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_30| Loss: 0.02956| IdemLoss: 0.02486| VQGANLoss: 0.00470| L0: 0.23790
+2025-06-20 16:17:39.522 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_20| Loss: 0.03842| IdemLoss: 0.03372| VQGANLoss: 0.00470| L0: 0.33201
+2025-06-20 16:17:48.572 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_5| Loss: 0.01847| IdemLoss: 0.01377| VQGANLoss: 0.00470| L0: 0.09249
+2025-06-20 16:17:57.599 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_7| Loss: 0.02012| IdemLoss: 0.01542| VQGANLoss: 0.00470| L0: 0.11779
+2025-06-20 16:18:06.639 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_9| Loss: 0.02387| IdemLoss: 0.01917| VQGANLoss: 0.00470| L0: 0.17641
+2025-06-20 16:18:15.652 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.06| Loss: 0.02991| IdemLoss: 0.02521| VQGANLoss: 0.00470| L0: 0.23579
+2025-06-20 16:18:24.682 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.08| Loss: 0.03618| IdemLoss: 0.03148| VQGANLoss: 0.00470| L0: 0.30023
+2025-06-20 16:18:33.719 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.1| Loss: 0.04318| IdemLoss: 0.03848| VQGANLoss: 0.00470| L0: 0.36571
+2025-06-20 16:18:42.739 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.4| Loss: 0.04361| IdemLoss: 0.03891| VQGANLoss: 0.00470| L0: 0.28279
+2025-06-20 16:18:51.741 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.7| Loss: 0.06653| IdemLoss: 0.06183| VQGANLoss: 0.00470| L0: 0.37496
+2025-06-20 16:19:00.750 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_2.0| Loss: 0.09841| IdemLoss: 0.09370| VQGANLoss: 0.00470| L0: 0.51502
+2025-06-20 16:19:09.804 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-3| Loss: 0.04415| IdemLoss: 0.03945| VQGANLoss: 0.00470| L0: 0.60953
+2025-06-20 16:19:18.879 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-2| Loss: 0.02948| IdemLoss: 0.02478| VQGANLoss: 0.00470| L0: 0.44971
+2025-06-20 16:19:27.935 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.02151| IdemLoss: 0.01681| VQGANLoss: 0.00470| L0: 0.28994
+2025-06-20 16:19:37.003 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.02189| IdemLoss: 0.01719| VQGANLoss: 0.00470| L0: 0.29609
+2025-06-20 16:19:46.073 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_2| Loss: 0.03032| IdemLoss: 0.02562| VQGANLoss: 0.00470| L0: 0.45847
+2025-06-20 16:19:55.131 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_3| Loss: 0.04631| IdemLoss: 0.04160| VQGANLoss: 0.00470| L0: 0.62210
+2025-06-20 16:20:04.128 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.5| Loss: 0.03408| IdemLoss: 0.02938| VQGANLoss: 0.00470| L0: 0.81379
+2025-06-20 16:20:13.140 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.6| Loss: 0.02198| IdemLoss: 0.01728| VQGANLoss: 0.00470| L0: 0.72237
+2025-06-20 16:20:22.162 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.7| Loss: 0.02412| IdemLoss: 0.01942| VQGANLoss: 0.00470| L0: 0.59970
+2025-06-20 16:20:31.161 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.01799| IdemLoss: 0.01329| VQGANLoss: 0.00470| L0: 0.46794
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R11] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R15] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R3] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R8] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R9] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R4] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R10] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R12] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R5] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R13] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R6] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R14] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R7] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R1] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.158 | INFO     | __main__:<module>:398 - [R2] Epoch 8/10 Training - 742 batches
+2025-06-20 16:20:40.160 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.01937| IdemLoss: 0.01467| VQGANLoss: 0.00470| L0: 0.31039
+2025-06-20 16:20:40.173 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 2.13184, DEC L2 Distance: 0.22447
+2025-06-20 16:20:40.174 | INFO     | __main__:<module>:398 - [R0] Epoch 8/10 Training - 742 batches
+2025-06-20 16:21:06.253 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=106) (lr=0.00005)| Loss: 0.02416| IdemLoss: 0.01984| VQGANLoss: 0.00432| L0: 0.19121
+2025-06-20 16:21:06.974 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.13750, DEC L2 Distance: 0.22471
+2025-06-20 16:21:32.761 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=107) (lr=0.00005)| Loss: 0.02472| IdemLoss: 0.02005| VQGANLoss: 0.00466| L0: 0.18813
+2025-06-20 16:21:33.480 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.14440, DEC L2 Distance: 0.22559
+2025-06-20 16:22:01.397 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=108) (lr=0.00005)| Loss: 0.02218| IdemLoss: 0.01772| VQGANLoss: 0.00446| L0: 0.17871
+2025-06-20 16:22:02.193 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.14914, DEC L2 Distance: 0.22530
+2025-06-20 16:22:27.700 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=109) (lr=0.00005)| Loss: 0.02456| IdemLoss: 0.02045| VQGANLoss: 0.00411| L0: 0.19490
+2025-06-20 16:22:28.415 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.15504, DEC L2 Distance: 0.22455
+2025-06-20 16:22:53.884 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=110) (lr=0.00005)| Loss: 0.02577| IdemLoss: 0.02137| VQGANLoss: 0.00441| L0: 0.20397
+2025-06-20 16:22:54.625 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.16099, DEC L2 Distance: 0.22512
+2025-06-20 16:23:20.126 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=111) (lr=0.00005)| Loss: 0.02310| IdemLoss: 0.01870| VQGANLoss: 0.00439| L0: 0.18108
+2025-06-20 16:23:20.778 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.16644, DEC L2 Distance: 0.22503
+2025-06-20 16:23:46.278 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=112) (lr=0.00005)| Loss: 0.02537| IdemLoss: 0.02098| VQGANLoss: 0.00439| L0: 0.18754
+2025-06-20 16:23:46.899 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.17274, DEC L2 Distance: 0.22595
+2025-06-20 16:24:12.420 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=113) (lr=0.00005)| Loss: 0.02386| IdemLoss: 0.01852| VQGANLoss: 0.00534| L0: 0.18419
+2025-06-20 16:24:13.144 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.17825, DEC L2 Distance: 0.22934
+2025-06-20 16:24:38.657 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=114) (lr=0.00005)| Loss: 0.02327| IdemLoss: 0.01885| VQGANLoss: 0.00442| L0: 0.18965
+2025-06-20 16:24:39.338 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.18436, DEC L2 Distance: 0.22827
+2025-06-20 16:25:04.914 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=115) (lr=0.00005)| Loss: 0.02345| IdemLoss: 0.01931| VQGANLoss: 0.00414| L0: 0.19389
+2025-06-20 16:25:05.628 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.19013, DEC L2 Distance: 0.22725
+2025-06-20 16:25:31.121 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=116) (lr=0.00005)| Loss: 0.02476| IdemLoss: 0.02049| VQGANLoss: 0.00427| L0: 0.19688
+2025-06-20 16:25:31.869 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.19603, DEC L2 Distance: 0.22714
+2025-06-20 16:25:57.471 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=117) (lr=0.00005)| Loss: 0.02423| IdemLoss: 0.01980| VQGANLoss: 0.00443| L0: 0.18802
+2025-06-20 16:25:58.150 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.20135, DEC L2 Distance: 0.22765
+2025-06-20 16:26:23.647 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=118) (lr=0.00005)| Loss: 0.02428| IdemLoss: 0.02033| VQGANLoss: 0.00395| L0: 0.18334
+2025-06-20 16:26:24.302 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.20750, DEC L2 Distance: 0.22699
+2025-06-20 16:26:49.857 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=119) (lr=0.00005)| Loss: 0.02450| IdemLoss: 0.02039| VQGANLoss: 0.00412| L0: 0.19189
+2025-06-20 16:26:50.614 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.21272, DEC L2 Distance: 0.22718
+2025-06-20 16:27:12.058 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=120) (lr=0.00005)| Loss: 0.02394| IdemLoss: 0.01944| VQGANLoss: 0.00451| L0: 0.17793
+2025-06-20 16:27:12.171 | INFO     | __main__:<module>:476 - [R6] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.172 | INFO     | __main__:<module>:476 - [R5] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.172 | INFO     | __main__:<module>:476 - [R2] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.172 | INFO     | __main__:<module>:476 - [R4] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.176 | INFO     | __main__:<module>:476 - [R3] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.179 | INFO     | __main__:<module>:476 - [R7] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.180 | INFO     | __main__:<module>:476 - [R13] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.182 | INFO     | __main__:<module>:476 - [R1] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.184 | INFO     | __main__:<module>:476 - [R14] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.184 | INFO     | __main__:<module>:476 - [R10] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.185 | INFO     | __main__:<module>:476 - [R9] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.185 | INFO     | __main__:<module>:476 - [R8] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.186 | INFO     | __main__:<module>:476 - [R15] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.186 | INFO     | __main__:<module>:476 - [R12] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.187 | INFO     | __main__:<module>:476 - [R11] End of epoch 8, last log step is #1
+2025-06-20 16:27:12.863 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.21741, DEC L2 Distance: 0.22813
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:476 - [R0] End of epoch 8, last log step is #121
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 8
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R1] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R8] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R2] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R9] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R3] Epoch 9/10 Validation
+2025-06-20 16:27:12.951 | INFO     | __main__:<module>:389 - [R10] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R5] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R11] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R6] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R12] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R7] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R13] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R4] Epoch 9/10 Validation
+2025-06-20 16:27:12.951 | INFO     | __main__:<module>:389 - [R14] Epoch 9/10 Validation
+2025-06-20 16:27:12.950 | INFO     | __main__:<module>:389 - [R15] Epoch 9/10 Validation
+2025-06-20 16:27:16.327 | INFO     | __main__:<module>:389 - [R0] Epoch 9/10 Validation
+2025-06-20 16:27:25.786 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01537| IdemLoss: 0.01059| VQGANLoss: 0.00479| L0: 0.04938
+2025-06-20 16:27:35.305 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_40| Loss: 0.02575| IdemLoss: 0.02096| VQGANLoss: 0.00479| L0: 0.19231
+2025-06-20 16:27:44.842 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_30| Loss: 0.02975| IdemLoss: 0.02497| VQGANLoss: 0.00479| L0: 0.23872
+2025-06-20 16:27:54.388 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_20| Loss: 0.03850| IdemLoss: 0.03371| VQGANLoss: 0.00479| L0: 0.33088
+2025-06-20 16:28:03.420 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_5| Loss: 0.01847| IdemLoss: 0.01368| VQGANLoss: 0.00479| L0: 0.09161
+2025-06-20 16:28:12.446 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_7| Loss: 0.01986| IdemLoss: 0.01508| VQGANLoss: 0.00479| L0: 0.11252
+2025-06-20 16:28:21.449 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_9| Loss: 0.02304| IdemLoss: 0.01826| VQGANLoss: 0.00479| L0: 0.16235
+2025-06-20 16:28:30.474 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.06| Loss: 0.02996| IdemLoss: 0.02517| VQGANLoss: 0.00479| L0: 0.23512
+2025-06-20 16:28:39.491 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.08| Loss: 0.03601| IdemLoss: 0.03122| VQGANLoss: 0.00479| L0: 0.29716
+2025-06-20 16:28:48.516 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.1| Loss: 0.04266| IdemLoss: 0.03788| VQGANLoss: 0.00479| L0: 0.35980
+2025-06-20 16:28:57.552 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.4| Loss: 0.04333| IdemLoss: 0.03854| VQGANLoss: 0.00479| L0: 0.29009
+2025-06-20 16:29:06.553 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.7| Loss: 0.06459| IdemLoss: 0.05981| VQGANLoss: 0.00479| L0: 0.35383
+2025-06-20 16:29:15.563 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_2.0| Loss: 0.09714| IdemLoss: 0.09235| VQGANLoss: 0.00479| L0: 0.48868
+2025-06-20 16:29:24.637 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-3| Loss: 0.04223| IdemLoss: 0.03744| VQGANLoss: 0.00479| L0: 0.59702
+2025-06-20 16:29:33.707 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-2| Loss: 0.02933| IdemLoss: 0.02454| VQGANLoss: 0.00479| L0: 0.44454
+2025-06-20 16:29:42.763 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.02173| IdemLoss: 0.01694| VQGANLoss: 0.00479| L0: 0.28884
+2025-06-20 16:29:51.847 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.02167| IdemLoss: 0.01689| VQGANLoss: 0.00479| L0: 0.28599
+2025-06-20 16:30:00.907 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_2| Loss: 0.02914| IdemLoss: 0.02435| VQGANLoss: 0.00479| L0: 0.44053
+2025-06-20 16:30:09.947 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_3| Loss: 0.04203| IdemLoss: 0.03724| VQGANLoss: 0.00479| L0: 0.59623
+2025-06-20 16:30:18.934 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.5| Loss: 0.03378| IdemLoss: 0.02899| VQGANLoss: 0.00479| L0: 0.81385
+2025-06-20 16:30:27.934 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.6| Loss: 0.02194| IdemLoss: 0.01715| VQGANLoss: 0.00479| L0: 0.72194
+2025-06-20 16:30:36.932 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.7| Loss: 0.02405| IdemLoss: 0.01926| VQGANLoss: 0.00479| L0: 0.59979
+2025-06-20 16:30:45.942 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.01797| IdemLoss: 0.01319| VQGANLoss: 0.00479| L0: 0.46771
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R6] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R8] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R2] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R9] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R4] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R10] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R11] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R12] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R15] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R14] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R13] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R3] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R5] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R7] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.976 | INFO     | __main__:<module>:398 - [R1] Epoch 9/10 Training - 742 batches
+2025-06-20 16:30:54.978 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.01937| IdemLoss: 0.01459| VQGANLoss: 0.00479| L0: 0.31032
+2025-06-20 16:30:54.991 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 2.21741, DEC L2 Distance: 0.22813
+2025-06-20 16:30:54.993 | INFO     | __main__:<module>:398 - [R0] Epoch 9/10 Training - 742 batches
+2025-06-20 16:31:21.056 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=121) (lr=0.00004)| Loss: 0.02506| IdemLoss: 0.02071| VQGANLoss: 0.00436| L0: 0.18850
+2025-06-20 16:31:21.833 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.22295, DEC L2 Distance: 0.22815
+2025-06-20 16:31:47.366 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=122) (lr=0.00004)| Loss: 0.02316| IdemLoss: 0.01882| VQGANLoss: 0.00434| L0: 0.17799
+2025-06-20 16:31:47.995 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.22748, DEC L2 Distance: 0.22905
+2025-06-20 16:32:13.552 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=123) (lr=0.00004)| Loss: 0.02320| IdemLoss: 0.01904| VQGANLoss: 0.00416| L0: 0.18014
+2025-06-20 16:32:14.230 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.23187, DEC L2 Distance: 0.22831
+2025-06-20 16:32:39.788 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=124) (lr=0.00004)| Loss: 0.02465| IdemLoss: 0.02065| VQGANLoss: 0.00400| L0: 0.19576
+2025-06-20 16:32:40.476 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.23699, DEC L2 Distance: 0.22794
+2025-06-20 16:33:06.027 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=125) (lr=0.00004)| Loss: 0.02295| IdemLoss: 0.01907| VQGANLoss: 0.00389| L0: 0.17276
+2025-06-20 16:33:06.694 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.24185, DEC L2 Distance: 0.22755
+2025-06-20 16:33:32.192 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=126) (lr=0.00004)| Loss: 0.02491| IdemLoss: 0.02044| VQGANLoss: 0.00447| L0: 0.19729
+2025-06-20 16:33:32.924 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.24707, DEC L2 Distance: 0.22996
+2025-06-20 16:33:58.424 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=127) (lr=0.00004)| Loss: 0.02389| IdemLoss: 0.01979| VQGANLoss: 0.00410| L0: 0.19374
+2025-06-20 16:33:59.106 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.25265, DEC L2 Distance: 0.22930
+2025-06-20 16:34:24.629 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=128) (lr=0.00004)| Loss: 0.02386| IdemLoss: 0.02005| VQGANLoss: 0.00381| L0: 0.19885
+2025-06-20 16:34:25.275 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.25710, DEC L2 Distance: 0.22873
+2025-06-20 16:34:50.826 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=129) (lr=0.00004)| Loss: 0.02396| IdemLoss: 0.02015| VQGANLoss: 0.00382| L0: 0.19593
+2025-06-20 16:34:51.516 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.26192, DEC L2 Distance: 0.22828
+2025-06-20 16:35:17.055 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=130) (lr=0.00004)| Loss: 0.02331| IdemLoss: 0.01939| VQGANLoss: 0.00392| L0: 0.18320
+2025-06-20 16:35:17.745 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.26734, DEC L2 Distance: 0.22799
+2025-06-20 16:35:43.242 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=131) (lr=0.00004)| Loss: 0.02339| IdemLoss: 0.01944| VQGANLoss: 0.00395| L0: 0.18029
+2025-06-20 16:35:43.881 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.27200, DEC L2 Distance: 0.22781
+2025-06-20 16:36:09.454 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=132) (lr=0.00004)| Loss: 0.02248| IdemLoss: 0.01858| VQGANLoss: 0.00390| L0: 0.18310
+2025-06-20 16:36:10.259 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.27562, DEC L2 Distance: 0.22846
+2025-06-20 16:36:35.756 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=133) (lr=0.00004)| Loss: 0.02301| IdemLoss: 0.01918| VQGANLoss: 0.00383| L0: 0.19304
+2025-06-20 16:36:36.484 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.28093, DEC L2 Distance: 0.22782
+2025-06-20 16:37:02.016 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=134) (lr=0.00004)| Loss: 0.02226| IdemLoss: 0.01836| VQGANLoss: 0.00390| L0: 0.18422
+2025-06-20 16:37:02.747 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.28597, DEC L2 Distance: 0.22833
+2025-06-20 16:37:24.187 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=135) (lr=0.00004)| Loss: 0.02186| IdemLoss: 0.01780| VQGANLoss: 0.00406| L0: 0.17346
+2025-06-20 16:37:24.291 | INFO     | __main__:<module>:476 - [R6] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.297 | INFO     | __main__:<module>:476 - [R2] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.297 | INFO     | __main__:<module>:476 - [R4] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.298 | INFO     | __main__:<module>:476 - [R7] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.299 | INFO     | __main__:<module>:476 - [R14] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.299 | INFO     | __main__:<module>:476 - [R15] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.299 | INFO     | __main__:<module>:476 - [R1] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.300 | INFO     | __main__:<module>:476 - [R5] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.301 | INFO     | __main__:<module>:476 - [R3] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.302 | INFO     | __main__:<module>:476 - [R13] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.306 | INFO     | __main__:<module>:476 - [R11] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.309 | INFO     | __main__:<module>:476 - [R9] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.310 | INFO     | __main__:<module>:476 - [R8] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.310 | INFO     | __main__:<module>:476 - [R12] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.311 | INFO     | __main__:<module>:476 - [R10] End of epoch 9, last log step is #1
+2025-06-20 16:37:24.973 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.28995, DEC L2 Distance: 0.22852
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:476 - [R0] End of epoch 9, last log step is #136
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 9
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R1] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R8] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R2] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R9] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R3] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R10] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R4] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R11] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R5] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R12] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R6] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R13] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R7] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R14] Epoch 10/10 Validation
+2025-06-20 16:37:25.064 | INFO     | __main__:<module>:389 - [R15] Epoch 10/10 Validation
+2025-06-20 16:37:28.406 | INFO     | __main__:<module>:389 - [R0] Epoch 10/10 Validation
+2025-06-20 16:37:37.858 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01389| IdemLoss: 0.01011| VQGANLoss: 0.00378| L0: 0.04236
+2025-06-20 16:37:47.376 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_40| Loss: 0.02407| IdemLoss: 0.02029| VQGANLoss: 0.00378| L0: 0.18580
+2025-06-20 16:37:56.904 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_30| Loss: 0.02799| IdemLoss: 0.02421| VQGANLoss: 0.00378| L0: 0.23252
+2025-06-20 16:38:06.419 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_20| Loss: 0.03654| IdemLoss: 0.03276| VQGANLoss: 0.00378| L0: 0.32459
+2025-06-20 16:38:15.450 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_5| Loss: 0.01727| IdemLoss: 0.01349| VQGANLoss: 0.00378| L0: 0.08866
+2025-06-20 16:38:24.467 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_7| Loss: 0.01864| IdemLoss: 0.01486| VQGANLoss: 0.00378| L0: 0.10894
+2025-06-20 16:38:33.517 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_9| Loss: 0.02136| IdemLoss: 0.01758| VQGANLoss: 0.00378| L0: 0.15157
+2025-06-20 16:38:42.533 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.06| Loss: 0.02819| IdemLoss: 0.02441| VQGANLoss: 0.00378| L0: 0.22977
+2025-06-20 16:38:51.572 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.08| Loss: 0.03426| IdemLoss: 0.03048| VQGANLoss: 0.00378| L0: 0.29392
+2025-06-20 16:39:00.574 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.1| Loss: 0.04085| IdemLoss: 0.03708| VQGANLoss: 0.00378| L0: 0.35717
+2025-06-20 16:39:09.591 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.4| Loss: 0.04649| IdemLoss: 0.04271| VQGANLoss: 0.00378| L0: 0.29679
+2025-06-20 16:39:18.623 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.7| Loss: 0.06649| IdemLoss: 0.06271| VQGANLoss: 0.00378| L0: 0.36785
+2025-06-20 16:39:27.635 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_2.0| Loss: 0.09385| IdemLoss: 0.09007| VQGANLoss: 0.00378| L0: 0.49558
+2025-06-20 16:39:36.733 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-3| Loss: 0.03843| IdemLoss: 0.03465| VQGANLoss: 0.00378| L0: 0.57951
+2025-06-20 16:39:45.788 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-2| Loss: 0.02688| IdemLoss: 0.02310| VQGANLoss: 0.00378| L0: 0.42718
+2025-06-20 16:39:54.852 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.02000| IdemLoss: 0.01622| VQGANLoss: 0.00378| L0: 0.27614
+2025-06-20 16:40:03.925 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.02007| IdemLoss: 0.01629| VQGANLoss: 0.00378| L0: 0.27712
+2025-06-20 16:40:13.018 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_2| Loss: 0.02716| IdemLoss: 0.02338| VQGANLoss: 0.00378| L0: 0.42920
+2025-06-20 16:40:22.077 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_3| Loss: 0.03876| IdemLoss: 0.03498| VQGANLoss: 0.00378| L0: 0.58227
+2025-06-20 16:40:31.076 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.5| Loss: 0.03273| IdemLoss: 0.02895| VQGANLoss: 0.00378| L0: 0.81238
+2025-06-20 16:40:40.070 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.6| Loss: 0.02067| IdemLoss: 0.01689| VQGANLoss: 0.00378| L0: 0.72006
+2025-06-20 16:40:49.078 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.7| Loss: 0.02295| IdemLoss: 0.01917| VQGANLoss: 0.00378| L0: 0.59753
+2025-06-20 16:40:58.081 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.01683| IdemLoss: 0.01305| VQGANLoss: 0.00378| L0: 0.46516
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R6] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R9] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R3] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R11] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R4] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R12] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R5] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R15] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R7] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R8] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R1] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R10] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R2] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R13] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.096 | INFO     | __main__:<module>:398 - [R14] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:07.099 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.01815| IdemLoss: 0.01437| VQGANLoss: 0.00378| L0: 0.30762
+2025-06-20 16:41:07.111 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 2.28995, DEC L2 Distance: 0.22852
+2025-06-20 16:41:07.113 | INFO     | __main__:<module>:398 - [R0] Epoch 10/10 Training - 742 batches
+2025-06-20 16:41:33.281 | INFO     | __main__:<module>:449 - [R0] Batches done: 50/742 (logstep=136) (lr=0.00004)| Loss: 0.02287| IdemLoss: 0.01928| VQGANLoss: 0.00359| L0: 0.19245
+2025-06-20 16:41:33.961 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.29320, DEC L2 Distance: 0.22781
+2025-06-20 16:41:59.512 | INFO     | __main__:<module>:449 - [R0] Batches done: 100/742 (logstep=137) (lr=0.00004)| Loss: 0.02502| IdemLoss: 0.02098| VQGANLoss: 0.00405| L0: 0.20029
+2025-06-20 16:42:00.263 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.29841, DEC L2 Distance: 0.22849
+2025-06-20 16:42:25.994 | INFO     | __main__:<module>:449 - [R0] Batches done: 150/742 (logstep=138) (lr=0.00004)| Loss: 0.02375| IdemLoss: 0.01997| VQGANLoss: 0.00378| L0: 0.20031
+2025-06-20 16:42:26.739 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.30354, DEC L2 Distance: 0.22835
+2025-06-20 16:42:54.379 | INFO     | __main__:<module>:449 - [R0] Batches done: 200/742 (logstep=139) (lr=0.00004)| Loss: 0.02306| IdemLoss: 0.01940| VQGANLoss: 0.00365| L0: 0.19193
+2025-06-20 16:42:55.150 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.30745, DEC L2 Distance: 0.22814
+2025-06-20 16:43:21.448 | INFO     | __main__:<module>:449 - [R0] Batches done: 250/742 (logstep=140) (lr=0.00004)| Loss: 0.02384| IdemLoss: 0.02023| VQGANLoss: 0.00361| L0: 0.19482
+2025-06-20 16:43:22.086 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.31251, DEC L2 Distance: 0.22816
+2025-06-20 16:43:47.607 | INFO     | __main__:<module>:449 - [R0] Batches done: 300/742 (logstep=141) (lr=0.00004)| Loss: 0.02473| IdemLoss: 0.02033| VQGANLoss: 0.00440| L0: 0.19609
+2025-06-20 16:43:48.403 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.31656, DEC L2 Distance: 0.22963
+2025-06-20 16:44:13.953 | INFO     | __main__:<module>:449 - [R0] Batches done: 350/742 (logstep=142) (lr=0.00004)| Loss: 0.02370| IdemLoss: 0.01945| VQGANLoss: 0.00425| L0: 0.19835
+2025-06-20 16:44:14.692 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.32072, DEC L2 Distance: 0.23089
+2025-06-20 16:44:40.216 | INFO     | __main__:<module>:449 - [R0] Batches done: 400/742 (logstep=143) (lr=0.00004)| Loss: 0.02399| IdemLoss: 0.02004| VQGANLoss: 0.00395| L0: 0.18442
+2025-06-20 16:44:40.959 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.32415, DEC L2 Distance: 0.23041
+2025-06-20 16:45:06.534 | INFO     | __main__:<module>:449 - [R0] Batches done: 450/742 (logstep=144) (lr=0.00004)| Loss: 0.02305| IdemLoss: 0.01877| VQGANLoss: 0.00428| L0: 0.18173
+2025-06-20 16:45:07.270 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.32833, DEC L2 Distance: 0.23168
+2025-06-20 16:45:32.780 | INFO     | __main__:<module>:449 - [R0] Batches done: 500/742 (logstep=145) (lr=0.00004)| Loss: 0.02272| IdemLoss: 0.01865| VQGANLoss: 0.00407| L0: 0.17439
+2025-06-20 16:45:33.407 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.33223, DEC L2 Distance: 0.23191
+2025-06-20 16:45:58.899 | INFO     | __main__:<module>:449 - [R0] Batches done: 550/742 (logstep=146) (lr=0.00004)| Loss: 0.02361| IdemLoss: 0.01977| VQGANLoss: 0.00384| L0: 0.18461
+2025-06-20 16:45:59.587 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.33582, DEC L2 Distance: 0.23152
+2025-06-20 16:46:25.119 | INFO     | __main__:<module>:449 - [R0] Batches done: 600/742 (logstep=147) (lr=0.00004)| Loss: 0.02499| IdemLoss: 0.02057| VQGANLoss: 0.00442| L0: 0.18575
+2025-06-20 16:46:25.857 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.34072, DEC L2 Distance: 0.23329
+2025-06-20 16:46:51.368 | INFO     | __main__:<module>:449 - [R0] Batches done: 650/742 (logstep=148) (lr=0.00004)| Loss: 0.02410| IdemLoss: 0.02011| VQGANLoss: 0.00399| L0: 0.20167
+2025-06-20 16:46:52.114 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.34435, DEC L2 Distance: 0.23259
+2025-06-20 16:47:17.708 | INFO     | __main__:<module>:449 - [R0] Batches done: 700/742 (logstep=149) (lr=0.00004)| Loss: 0.02329| IdemLoss: 0.01945| VQGANLoss: 0.00383| L0: 0.19193
+2025-06-20 16:47:18.473 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.34859, DEC L2 Distance: 0.23228
+2025-06-20 16:47:39.908 | INFO     | __main__:<module>:449 - [R0] Batches done: 742/742 (logstep=150) (lr=0.00004)| Loss: 0.02147| IdemLoss: 0.01781| VQGANLoss: 0.00365| L0: 0.17046
+2025-06-20 16:47:40.014 | INFO     | __main__:<module>:476 - [R6] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.016 | INFO     | __main__:<module>:476 - [R4] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.016 | INFO     | __main__:<module>:476 - [R2] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.019 | INFO     | __main__:<module>:476 - [R1] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.021 | INFO     | __main__:<module>:476 - [R5] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.022 | INFO     | __main__:<module>:476 - [R3] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.029 | INFO     | __main__:<module>:476 - [R7] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.031 | INFO     | __main__:<module>:476 - [R11] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.032 | INFO     | __main__:<module>:476 - [R10] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.033 | INFO     | __main__:<module>:476 - [R12] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.034 | INFO     | __main__:<module>:476 - [R9] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.035 | INFO     | __main__:<module>:476 - [R13] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.037 | INFO     | __main__:<module>:476 - [R14] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.039 | INFO     | __main__:<module>:476 - [R15] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.041 | INFO     | __main__:<module>:476 - [R8] End of epoch 10, last log step is #1
+2025-06-20 16:47:40.642 | INFO     | __main__:<module>:466 - [R0] ENC L2 Distance: 2.35201, DEC L2 Distance: 0.23176
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:476 - [R0] End of epoch 10, last log step is #151
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:486 - [R0] Saving weights at end of epoch 10
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R8] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R9] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R10] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R11] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R12] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R13] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R14] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R15] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R1] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R2] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R3] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R4] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R5] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R6] Done! Doing final validation.
+2025-06-20 16:47:40.730 | INFO     | __main__:<module>:510 - [R7] Done! Doing final validation.
+2025-06-20 16:47:44.055 | INFO     | __main__:<module>:510 - [R0] Done! Doing final validation.
+2025-06-20 16:47:53.497 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Identity'>_0| Loss: 0.01352| IdemLoss: 0.01003| VQGANLoss: 0.00350| L0: 0.04162
+2025-06-20 16:48:03.025 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_40| Loss: 0.02373| IdemLoss: 0.02023| VQGANLoss: 0.00350| L0: 0.18304
+2025-06-20 16:48:12.626 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_30| Loss: 0.02764| IdemLoss: 0.02415| VQGANLoss: 0.00350| L0: 0.22889
+2025-06-20 16:48:22.155 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.JPEG'>_20| Loss: 0.03609| IdemLoss: 0.03259| VQGANLoss: 0.00350| L0: 0.31973
+2025-06-20 16:48:31.175 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_5| Loss: 0.01663| IdemLoss: 0.01314| VQGANLoss: 0.00350| L0: 0.08381
+2025-06-20 16:48:40.201 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_7| Loss: 0.01796| IdemLoss: 0.01447| VQGANLoss: 0.00350| L0: 0.10342
+2025-06-20 16:48:49.222 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianBlur'>_9| Loss: 0.02132| IdemLoss: 0.01783| VQGANLoss: 0.00350| L0: 0.15554
+2025-06-20 16:48:58.235 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.06| Loss: 0.02777| IdemLoss: 0.02428| VQGANLoss: 0.00350| L0: 0.22585
+2025-06-20 16:49:07.255 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.08| Loss: 0.03383| IdemLoss: 0.03033| VQGANLoss: 0.00350| L0: 0.28819
+2025-06-20 16:49:16.282 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.GaussianNoise'>_0.1| Loss: 0.04022| IdemLoss: 0.03672| VQGANLoss: 0.00350| L0: 0.35002
+2025-06-20 16:49:25.297 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.4| Loss: 0.04439| IdemLoss: 0.04090| VQGANLoss: 0.00350| L0: 0.29322
+2025-06-20 16:49:34.322 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_1.7| Loss: 0.06240| IdemLoss: 0.05890| VQGANLoss: 0.00350| L0: 0.34837
+2025-06-20 16:49:43.329 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.valuemetric.Brightness'>_2.0| Loss: 0.08974| IdemLoss: 0.08624| VQGANLoss: 0.00350| L0: 0.47374
+2025-06-20 16:49:52.389 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-3| Loss: 0.03711| IdemLoss: 0.03362| VQGANLoss: 0.00350| L0: 0.56676
+2025-06-20 16:50:01.452 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-2| Loss: 0.02602| IdemLoss: 0.02252| VQGANLoss: 0.00350| L0: 0.41904
+2025-06-20 16:50:10.531 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_-1| Loss: 0.01946| IdemLoss: 0.01596| VQGANLoss: 0.00350| L0: 0.27203
+2025-06-20 16:50:19.615 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_1| Loss: 0.01955| IdemLoss: 0.01606| VQGANLoss: 0.00350| L0: 0.27262
+2025-06-20 16:50:28.672 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_2| Loss: 0.02623| IdemLoss: 0.02273| VQGANLoss: 0.00350| L0: 0.42068
+2025-06-20 16:50:37.724 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.Rotate'>_3| Loss: 0.03767| IdemLoss: 0.03417| VQGANLoss: 0.00350| L0: 0.57099
+2025-06-20 16:50:46.719 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.5| Loss: 0.03230| IdemLoss: 0.02880| VQGANLoss: 0.00350| L0: 0.81209
+2025-06-20 16:50:55.707 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.6| Loss: 0.02035| IdemLoss: 0.01685| VQGANLoss: 0.00350| L0: 0.71879
+2025-06-20 16:51:04.698 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.7| Loss: 0.02234| IdemLoss: 0.01885| VQGANLoss: 0.00350| L0: 0.59622
+2025-06-20 16:51:13.696 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.8| Loss: 0.01644| IdemLoss: 0.01294| VQGANLoss: 0.00350| L0: 0.46349
+2025-06-20 16:51:22.700 | INFO     | __main__:validate:122 - [R0] Validation <class 'wmar.augmentations.geometric.UpperLeftCropWithPadBack'>_0.9| Loss: 0.01772| IdemLoss: 0.01423| VQGANLoss: 0.00350| L0: 0.30553
+2025-06-20 16:51:22.713 | INFO     | __main__:validate:128 - [R0] [Val] ENC L2 Distance: 2.35201, DEC L2 Distance: 0.23176
+CLUTIL_JOB_FINISHED
+CLUTIL_TIME 6055

@@ -1,0 +1,12 @@
+.cache/
+__pycache__/
+*.bin
+*.ckpt
+*.pt
+*.pth
+*.pkl
+*.ptl
+*.ptl.tar
+*.ptl.tar.gz
+*.ptl.tar.bz2
+assets/

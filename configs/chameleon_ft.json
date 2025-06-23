@@ -1,0 +1,28 @@
+{
+    "cmd": "python3 finetune.py",
+    "params": {
+        "master_port":                      "14014", 
+        "model":                            "chameleon7b",
+        "modelpath":                        "checkpoints/Anole-7b-v0.1",
+        "dataset":                          "codes-imagenet",
+        "datapath":                         "out/imagenet_chameleon/codes",
+        "dataset_size":                     50000, 
+        "mode":                             "newenc-dec",
+        "nb_epochs":                        10,
+        "augs_schedule":                    "1,1,4,4",
+        "optimizer":                        "adam",
+        "lr":                               1e-4, 
+        "batch_size_per_gpu":               8,
+        "disable_gan":                      true,
+        "idempotence_loss_weight":          1.0,
+        "idempotence_loss_weight_factor":   1.0,
+        "loss":                             "hard-to-soft-with-ae",
+        "augs":                             "all+geom"
+    },
+    "meta": {
+        "group":     "", 
+        "name":      "0620_chameleon_ft", 
+        "dest-arg":  "yes",
+        "dest-name": "outdir"
+   }
+}

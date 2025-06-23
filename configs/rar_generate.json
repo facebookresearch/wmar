@@ -1,0 +1,42 @@
+{
+    "cmd": "python3 generate.py",
+    "params": {
+        "num_chunks":                   25,
+        "chunk_id":                     [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],  
+        "model":                        "rar",
+        "modelpath":                    "checkpoints/rar",
+        "num_samples_per_conditioning": 100,
+        "conditioning":                 "1,9,232,340,568,656,703,814,937,975",
+        "batch_size":                   10,
+        "include_neural_compress":      true,
+        "include_diffpure":             true,
+        "wm_split_strategy":            "stratifiedrand",
+        "wm_context_size":              1,
+        "wm_gamma":                     0.25, 
+        "wm_delta":                     2,  
+        "wm_seed_strategy":             "linear",
+        "wm_method":                    "gentime",
+        "wampath":                      "checkpoints/wam_mit.pth",
+        "encoder_ft_ckpt": {
+            "none": {
+                "decoder_ft_ckpt":      "none",
+                "wam":                  false
+            },
+            "checkpoints/finetunes/rar_encoder_ft_noaug_delta.pth": {
+                "decoder_ft_ckpt":      "checkpoints/finetunes/rar_decoder_ft_noaug_delta.pth",
+                "wam":                  false
+            },
+            "checkpoints/finetunes/rar_encoder_ft_delta.pth": {
+                "decoder_ft_ckpt":      "checkpoints/finetunes/rar_decoder_ft_delta.pth",
+                "wam":                  [true, false]
+            }
+        },
+        "seed": 1
+    },
+    "meta": {
+        "group":     "", 
+        "name":      "0617_rar_generate", 
+        "dest-arg":  "yes",
+        "dest-name": "outdir"
+   }
+}
