@@ -99,7 +99,7 @@ wget https://dl.fbaipublicfiles.com/watermark_anything/wam_mit.pth -P checkpoint
 
 To evaluate watermark robustness, download the [DiffPure](https://diffpure.github.io/) model:
 ```
-wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt checkpoints/
+wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt -P checkpoints/
 ```
 
 ## 🎮 Usage
@@ -119,10 +119,10 @@ The 4 corresponding runs are documented in a readable form in `configs/taming_ge
 For Taming, we provide the corresponding 4 commands in `configs/taming_generate.sh`.
 For example, to run _FT+Augs+Sync_, execute:
 ```bash
-python3 generate.py --seed 1 --model taming \ 
---decoder_ft_ckpt checkpoints/finetunes/taming_decoder_ft_delta.pth \ 
+python3 generate.py --seed 1 --model taming \
+--decoder_ft_ckpt checkpoints/finetunes/taming_decoder_ft_delta.pth \
 --encoder_ft_ckpt checkpoints/finetunes/taming_encoder_ft_delta.pth  \
---modelpath checkpoints/2021-04-03T19-39-50_cin_transformer/ \ 
+--modelpath checkpoints/2021-04-03T19-39-50_cin_transformer/ \
 --wam True --wampath checkpoints/wam_mit.pth \
 --wm_method gentime --wm_seed_strategy linear --wm_delta 2 --wm_gamma 0.25 \
 --wm_context_size 1 --wm_split_strategy stratifiedrand \
@@ -131,7 +131,7 @@ python3 generate.py --seed 1 --model taming \
 --conditioning 1,9,232,340,568,656,703,814,937,975 \
 --num_samples_per_conditioning 100 \
 --chunk_id 0 --num_chunks 1 \
---outdir checkpoints/0617_taming_generate/_wam=True_decoder_ft_ckpt=2_encoder_ft_ckpt=2  
+--outdir checkpoints/0617_taming_generate/_wam=True_decoder_ft_ckpt=2_encoder_ft_ckpt=2
 ```
 Evaluation can be speed up by increasing the batch size, and parallelizing the evaluation using `chunk_id` and `num_chunks` (see `configs/rar_generate.json` for an example).
 Each such run will save the outputs under `out/0617_taming_generate`, that we can parse, aggregate, and plot as follows:
