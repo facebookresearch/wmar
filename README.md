@@ -131,7 +131,7 @@ python3 generate.py --seed 1 --model taming \
 --conditioning 1,9,232,340,568,656,703,814,937,975 \
 --num_samples_per_conditioning 100 \
 --chunk_id 0 --num_chunks 1 \
---outdir checkpoints/0617_taming_generate/_wam=True_decoder_ft_ckpt=2_encoder_ft_ckpt=2
+--outdir out/0617_taming_generate/_wam=True_decoder_ft_ckpt=2_encoder_ft_ckpt=2
 ```
 Evaluation can be speed up by increasing the batch size, and parallelizing the evaluation using `chunk_id` and `num_chunks` (see `configs/rar_generate.json` for an example).
 Each such run will save the outputs under `out/0617_taming_generate`, that we can parse, aggregate, and plot as follows:
@@ -175,7 +175,7 @@ OMP_NUM_THREADS=40 torchrun --standalone --nnodes=1 --nproc_per_node=2 finetune.
 --optimizer adam --lr 0.0001 --batch_size_per_gpu 4 \ 
 --disable_gan --idempotence_loss_weight 1.0 --idempotence_loss_weight_factor 1.0 \ 
 --loss hard-to-soft-with-ae --augs all+geom \ 
---outdir checkpoints/0617_taming_ft
+--outdir out/0617_taming_ft
 ```
 Note that this results in a smaller total batch size than the one we used for the paper, where we train on 16 GPUs.
 The finetuning script also downloads the LPIPS checkpoint to `checkpoints/lpips` automatically (needed for perceptual loss).
