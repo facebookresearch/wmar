@@ -1,0 +1,4 @@
+train_dir: /path/to/your-dataset/sa-1b/train/
+val_dir: /path/to/your-dataset/sa-1b/val/
+train_annotation_file: null
+val_annotation_file: null

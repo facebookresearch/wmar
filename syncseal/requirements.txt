@@ -1,0 +1,15 @@
+omegaconf
+einops
+lpips
+timm==0.9.16
+scikit-image
+pandas
+tqdm
+pytorch_msssim
+tensorboard
+pycocotools
+opencv-python
+scipy
+matplotlib
+loguru
+torchmetrics

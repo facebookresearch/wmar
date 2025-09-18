@@ -1,0 +1,40 @@
+[project]
+name = "syncseal"
+version = "0.1.0"
+description = "Self-contained image watermark synchronization (models + evals)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "FAIR, Meta Superintelligence Labs" }]
+keywords = ["watermarking", "synchronization", "computer-vision", "deep-learning"]
+
+dependencies = [
+  "torch",
+  "omegaconf",
+  "einops",
+  "lpips",
+  "timm==0.9.16",
+  "scikit-image",
+  "pandas",
+  "tqdm",
+  "pytorch_msssim",
+  "tensorboard",
+  "pycocotools",
+  "opencv-python",
+  "scipy",
+  "ipykernel",
+  "matplotlib",
+  "loguru",
+  "torchmetrics>=1.8.2",
+]
+
+[project.urls]
+"Repository" = "https://github.com/facebookresearch/wmar/tree/main/syncseal"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["syncseal*"]
+exclude = ["notebooks*"]

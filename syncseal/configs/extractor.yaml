@@ -1,0 +1,9 @@
+model: convnext_tiny
+
+convnext_tiny:
+  encoder:
+    depths: [3, 3, 9, 3]
+    dims: [96, 192, 384, 768]
+  head:
+    embed_dim: 768  # = encoder.out_chans
+    out_dim: 8
