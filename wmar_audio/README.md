@@ -1,6 +1,6 @@
 # WMAR Audio
 
-We present the code for the audio study of the paper [Watermarking Autoregressive Image Generation](https://arxiv.org/abs/...). 
+We present the code for the audio study of the paper [Watermarking Autoregressive Image Generation](https://arxiv.org/abs/2506.16349). 
 The analysis and code of this folder is based on Moshi, a framework for duplex text-speech models: [[paper](https://kyutai.org/Moshi.pdf)],
 [[main_repo](https://github.com/kyutai-labs/moshi)] 
 
