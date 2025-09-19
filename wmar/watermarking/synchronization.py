@@ -5,6 +5,7 @@
 # LICENSE file in the root directory of this source tree.​
 
 import os
+import time 
 
 import numpy as np
 import torch
@@ -19,14 +20,13 @@ from deps.watermark_anything.utils.inference_utils import (
     unnormalize_img,
 )
 
-
-class SyncManager:
-    def __init__(self, wampath, device):
+class WamSync:
+    def __init__(self, syncpath, device):
         self.device = device
 
-        # NOTE: Make sure to download the model to wampath
+        # NOTE: Make sure to download the model to syncpath
         json_path = os.path.join("deps", "watermark_anything", "params.json")
-        ckpt_path = os.path.join(wampath)
+        ckpt_path = os.path.join(syncpath)
         self.wam = load_model_from_checkpoint(json_path, ckpt_path).to(device).eval()
         self.epsilon = 1
         self.min_samples = 500
@@ -61,50 +61,6 @@ class SyncManager:
     def unnormalize(self, imgs):
         imgs = unnormalize_img(imgs) * 2.0 - 1.0
         return imgs.clamp(-1, 1)
-
-    # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
-    def add_wam(self, imgs, return_masks=False):
-        orig_device = imgs.device
-        imgs = self.normalize(imgs).to(self.device)
-        masks = self.create_grid_mask(imgs[-1], num_masks=len(self.wm_msgs))
-        multi_wm_imgs = []
-        for img in imgs:
-            multi_wm_img = img.clone()
-            for ii in range(len(self.wm_msgs)):
-                wm_msg, mask = self.wm_msgs[ii].unsqueeze(0), masks[ii]
-                outputs = self.wam.embed(img.unsqueeze(0), wm_msg)
-                multi_wm_img = outputs["imgs_w"] * mask + multi_wm_img * (1 - mask)  # [1, 3, H, W]
-            multi_wm_imgs.append(multi_wm_img)
-        multi_wm_imgs = torch.cat(multi_wm_imgs, dim=0)
-        ret = self.unnormalize(multi_wm_imgs).to(orig_device)
-        if return_masks:
-            return ret, masks
-        else:
-            return ret
-
-    # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
-    def remove_wam(self, imgs, return_info=False):
-        orig_device = imgs.device
-        imgs = self.normalize(imgs).to(self.device)
-        preds = self.wam.detect(imgs)["preds"]  # [B, 33, 256, 256]
-        reverteds = []
-        for i in range(imgs.shape[0]):
-            aug_info, wam_info = self.estimate_augmentation_with_wam(
-                imgs[i].unsqueeze(0), self.wm_msgs, preds[i].unsqueeze(0), self.epsilon, self.min_samples, idx=i
-            )
-            reverted = self.revert_augmentation(imgs[i].unsqueeze(0), aug_info).detach()
-            reverteds.append(self.unnormalize(reverted).to(orig_device))
-
-            angle, cuti, cutj, is_flipped = aug_info
-            mask_preds_res, positions, centroids = wam_info
-            logger.info(
-                f"{i}: {len(centroids)} messages found | Rot: {angle}, cuts: {cuti}, {cutj} (flip={is_flipped})"
-            )
-
-        if return_info:
-            return torch.cat(reverteds, dim=0), aug_info, wam_info
-        else:
-            return torch.cat(reverteds, dim=0)
 
     def create_grid_mask(self, img_pt, num_masks):
         masks = torch.zeros((num_masks, 1, img_pt.shape[-2], img_pt.shape[-1]))
@@ -338,3 +294,117 @@ class SyncManager:
         # Now resize back to (256, 256)
         reverted = TVF.resize(reverted, (origH, origW))
         return reverted
+
+    # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
+    def add_sync(self, imgs, return_masks=False):
+        orig_device = imgs.device
+        imgs = self.normalize(imgs).to(self.device)
+        masks = self.create_grid_mask(imgs[-1], num_masks=len(self.wm_msgs))
+        multi_wm_imgs = []
+        for img in imgs:
+            multi_wm_img = img.clone()
+            for ii in range(len(self.wm_msgs)):
+                wm_msg, mask = self.wm_msgs[ii].unsqueeze(0), masks[ii]
+                outputs = self.wam.embed(img.unsqueeze(0), wm_msg)
+                multi_wm_img = outputs["imgs_w"] * mask + multi_wm_img * (1 - mask)  # [1, 3, H, W]
+            multi_wm_imgs.append(multi_wm_img)
+        multi_wm_imgs = torch.cat(multi_wm_imgs, dim=0)
+        ret = self.unnormalize(multi_wm_imgs).to(orig_device)
+        if return_masks:
+            return ret, masks
+        else:
+            return ret
+
+    # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
+    def remove_sync(self, imgs, return_info=False):
+        orig_device = imgs.device
+        imgs = self.normalize(imgs).to(self.device)
+        preds = self.wam.detect(imgs)["preds"]  # [B, 33, 256, 256]
+        reverteds = []
+        for i in range(imgs.shape[0]):
+            aug_info, wam_info = self.estimate_augmentation_with_wam(
+                imgs[i].unsqueeze(0), self.wm_msgs, preds[i].unsqueeze(0), self.epsilon, self.min_samples, idx=i
+            )
+            reverted = self.revert_augmentation(imgs[i].unsqueeze(0), aug_info).detach()
+            reverteds.append(self.unnormalize(reverted).to(orig_device))
+
+            angle, cuti, cutj, is_flipped = aug_info
+            mask_preds_res, positions, centroids = wam_info
+            logger.info(
+                f"{i}: {len(centroids)} messages found | Rot: {angle}, cuts: {cuti}, {cutj} (flip={is_flipped})"
+            )
+
+        if return_info:
+            return torch.cat(reverteds, dim=0), aug_info, wam_info
+        else:
+            return torch.cat(reverteds, dim=0)
+
+class SyncSeal:
+    def __init__(self, syncpath, device):
+        self.model = torch.jit.load(syncpath, map_location=device).eval()
+        self.device = device
+
+    # transfer to SYNC space, [-1, 1] -> [0, 1]
+    def normalize(self, imgs):
+        return (imgs + 1.0) / 2.0
+
+    # transfer from SYNC space, [0, 1]-> [-1, 1]
+    def unnormalize(self, imgs):
+        imgs = imgs * 2.0 - 1.0
+        return imgs.clamp(-1, 1)
+
+
+    # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
+    def add_sync(self, imgs, return_masks=False):
+        assert return_masks == False, "return_masks not supported for SyncSeal"
+        orig_device = imgs.device
+        imgs = self.normalize(imgs).to(self.device)
+        with torch.no_grad():
+            imgs_w = self.model.embed(imgs)["imgs_w"]
+        ret = self.unnormalize(imgs_w).to(orig_device)
+        return ret
+
+    # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
+    def remove_sync(self, imgs, return_info=False):
+        assert return_info == False, "return_masks not supported for SyncSeal"
+        orig_device = imgs.device
+        orig_size = imgs.shape[-2], imgs.shape[-1]
+        imgs = self.normalize(imgs).to(self.device)
+
+        with torch.no_grad():
+            det = self.model.detect(imgs)
+            pred_pts = det['preds_pts']  # Bx8 normalized [-1,1]
+            imgs_unwarped = self.model.unwarp(imgs, pred_pts, orig_size) 
+
+        ret = self.unnormalize(imgs_unwarped).to(orig_device)
+        return ret
+
+
+##################################################################
+
+
+class SyncManager:
+    def __init__(self, syncpath, device):
+        if 'wam_mit' in syncpath:
+            self.sync = WamSync(syncpath, device)
+        elif 'syncmodel.jit.pt' in syncpath:
+            self.sync = SyncSeal(syncpath, device)
+        else:
+            raise NotImplementedError(f"Unknown wam model {syncpath}")
+            
+    # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
+    def add_sync(self, imgs, return_masks=False):
+        t_start = time.time()
+        ret = self.sync.add_sync(imgs, return_masks)
+        t_end = time.time()
+        logger.info(f"add_sync time: {t_end - t_start:.5f}s for batch size {imgs.shape[0]}")
+        return ret
+    
+    # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
+    def remove_sync(self, imgs, return_info=False):
+        t_start = time.time()
+        ret = self.sync.remove_sync(imgs, return_info)
+        t_end = time.time()
+        logger.info(f"remove_sync time: {t_end - t_start:.5f}s for batch size {imgs.shape[0]}")
+        return ret
+

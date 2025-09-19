@@ -4,7 +4,7 @@
   <img src="https://dl.fbaipublicfiles.com/wmar/gimmick.gif" alt="Watermarking Demo" width="600"/>
 </p>
 
-Official implementation of [Watermarking Autoregressive Image Generation](https://arxiv.org/pdf/2506.16349).
+Official implementation of [Watermarking Autoregressive Image Generation](https://arxiv.org/pdf/2506.16349) (NeurIPS 2025).
 This repository provides a framework for watermarking autoregressive image models, and includes the code to reproduce the main results from the paper. 
 In [`wmar_audio`](https://github.com/facebookresearch/wmar/tree/main/wmar_audio) we also provide the code accompanying our case study on Audio (see Section 5 in the paper). 
 
@@ -13,8 +13,8 @@ In [`wmar_audio`](https://github.com/facebookresearch/wmar/tree/main/wmar_audio)
 
 ## 📰 News
 
-- **19th September**: New work on watermark synchronization! Check out [SyncSeal](https://arxiv.org/abs/2509.15208) - an active method for synchronizing images and improving robustness against desynchronization attacks. Code is available in the [`syncseal/`](syncseal) folder.
-- **18th September**: Our paper has been accepted to NeurIPS 2025! 🎉
+- **September 19**: Follow-up work! [SyncSeal](https://arxiv.org/abs/2509.15208) is an active watermark synchronization method that improves robustness against desynchronization attacks. To use it as a drop-in replacement for the original synchronization layer, download the TorchScript (`wget https://dl.fbaipublicfiles.com/wmar/syncseal/paper/syncmodel.jit.pt -P checkpoints/`) and forward the path to the SyncManager (`--syncpath` flag). A standalone SyncSeal code release is in the [`syncseal/`](syncseal) folder.
+- **September 18**: Our paper has been accepted to NeurIPS 2025! 🎉
 
 
 ## 💿 Installation
@@ -97,9 +97,14 @@ Alternatively, you can:
 
 ### 4️⃣ Other Requirements
 
-To use watermark synchronization, download [WAM](https://github.com/facebookresearch/watermark-anything): 
+To use the original watermark synchronization layer, download [WAM](https://github.com/facebookresearch/watermark-anything): 
 ```
 wget https://dl.fbaipublicfiles.com/watermark_anything/wam_mit.pth -P checkpoints/
+```
+
+To instead use the active synchronization method from our follow-up work [SyncSeal](https://arxiv.org/abs/2509.15208), download the TorchScript:
+```
+wget https://dl.fbaipublicfiles.com/wmar/syncseal/paper/syncmodel.jit.pt -P checkpoints/
 ```
 
 To evaluate watermark robustness, download the [DiffPure](https://diffpure.github.io/) model:
@@ -128,7 +133,7 @@ python3 generate.py --seed 1 --model taming \
 --decoder_ft_ckpt checkpoints/finetunes/taming_decoder_ft_delta.pth \
 --encoder_ft_ckpt checkpoints/finetunes/taming_encoder_ft_delta.pth  \
 --modelpath checkpoints/2021-04-03T19-39-50_cin_transformer/ \
---wam True --wampath checkpoints/wam_mit.pth \
+--sync True --syncpath checkpoints/wam_mit.pth \
 --wm_method gentime --wm_seed_strategy linear --wm_delta 2 --wm_gamma 0.25 \
 --wm_context_size 1 --wm_split_strategy stratifiedrand \
 --include_diffpure True --include_neural_compress True \
@@ -136,7 +141,7 @@ python3 generate.py --seed 1 --model taming \
 --conditioning 1,9,232,340,568,656,703,814,937,975 \
 --num_samples_per_conditioning 100 \
 --chunk_id 0 --num_chunks 1 \
---outdir out/0617_taming_generate/_wam=True_decoder_ft_ckpt=2_encoder_ft_ckpt=2
+--outdir out/0617_taming_generate/_sync=True_decoder_ft_ckpt=2_encoder_ft_ckpt=2
 ```
 Evaluation can be speed up by increasing the batch size, and parallelizing the evaluation using `chunk_id` and `num_chunks` (see `configs/rar_generate.json` for an example).
 Each such run will save the outputs under `out/0617_taming_generate`, that we can parse, aggregate, and plot as follows:
@@ -146,10 +151,10 @@ outdir = "out/0617_taming_generate"
 watermark = "linear-stratifiedrand-h=1-d=2.0-g=0.25"
 methods = {
     # "name": (outdir, relevant_dir_prefix, watermark_as_str)
-    "original": (outdir, "_wam=False_decoder_ft_ckpt=0", watermark),
-    "finetuned_noaugs": (outdir, "_wam=False_decoder_ft_ckpt=1", watermark),
-    "finetuned_augs": (outdir, "_wam=False_decoder_ft_ckpt=2", watermark),
-    "finetuned_augs+sync": (outdir, "_wam=True_decoder_ft_ckpt=2", watermark)
+    "original": (outdir, "_sync=False_decoder_ft_ckpt=0", watermark),
+    "finetuned_noaugs": (outdir, "_sync=False_decoder_ft_ckpt=1", watermark),
+    "finetuned_augs": (outdir, "_sync=False_decoder_ft_ckpt=2", watermark),
+    "finetuned_augs+sync": (outdir, "_sync=True_decoder_ft_ckpt=2", watermark)
 }
 analyzer = Analyzer(methods, cache_path="assets/cache.json")
 analyzer.set_up_latex()

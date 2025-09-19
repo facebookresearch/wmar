@@ -47,7 +47,7 @@ def compute_metrics_and_save_from_batch_log(log, outdir, watermarker, eval_param
             logger.debug(f"  Computing metrics and saving from batch log transform: {transform}")
             # Param: 20, Codes: [B, 256], Imgs: [B, 3, 256, 256]
             # Code was first, Img is the decoded version
-            for _, (param, codes, imgs, imgs_nowam) in enumerate(log[method][transform]):
+            for _, (param, codes, imgs, imgs_nosync) in enumerate(log[method][transform]):
                 for i in range(len(codes)):
                     # Extract
                     conditioning = log["batch"][i]
@@ -79,9 +79,9 @@ def compute_metrics_and_save_from_batch_log(log, outdir, watermarker, eval_param
                         curr_outdir = os.path.join(outdir, f"c={conditioning},idx={cond_index}")
                         os.makedirs(curr_outdir, exist_ok=True)
                         img.save(os.path.join(curr_outdir, f"{cond_index:04}_{method}_{transform}_{param}.png"))
-                        if imgs_nowam is not None:
-                            chw_to_pillow(imgs_nowam[i]).save(
-                                os.path.join(curr_outdir, f"{cond_index:04}_{method}_{transform}_{param}_nowam.png")
+                        if imgs_nosync is not None:
+                            chw_to_pillow(imgs_nosync[i]).save(
+                                os.path.join(curr_outdir, f"{cond_index:04}_{method}_{transform}_{param}_nosync.png")
                             )
                         np.save(os.path.join(curr_outdir, f"{cond_index:04}_{method}_{transform}_{param}.npy"), code)
                         # Save metrics
@@ -113,7 +113,7 @@ def fill_batch_log(batch_log, key, model, codes, eval_params, sync_manager=None)
     # Decode codes to images
     imgs = model.codes_to_images(codes)  # [b, 3, 256, 256] in [-1, 1]
     if sync_manager is not None:
-        imgs = sync_manager.add_wam(imgs)
+        imgs = sync_manager.add_sync(imgs)
     logger.debug(f"Filling batch log for {key}")
     batch_log[key] = {}
 
@@ -124,10 +124,10 @@ def fill_batch_log(batch_log, key, model, codes, eval_params, sync_manager=None)
     for T in range(1, eval_params["max_roundtrips"] + 1):
         # Get the next roundtrip
         if sync_manager is not None:
-            curr_imgs_nowam = sync_manager.remove_wam(curr_imgs)
-            curr_codes = model.images_to_codes(curr_imgs_nowam)
+            curr_imgs_nosync = sync_manager.remove_sync(curr_imgs)
+            curr_codes = model.images_to_codes(curr_imgs_nosync)
         else:
-            curr_imgs_nowam = None
+            curr_imgs_nosync = None
             curr_codes = model.images_to_codes(curr_imgs)
         curr_imgs = model.codes_to_images(curr_codes)
         batch_log[key]["roundtrips"].append(
@@ -135,7 +135,7 @@ def fill_batch_log(batch_log, key, model, codes, eval_params, sync_manager=None)
                 T,
                 curr_codes.cpu().numpy(),
                 curr_imgs.cpu().numpy(),
-                curr_imgs_nowam.cpu().numpy() if curr_imgs_nowam is not None else None,
+                curr_imgs_nosync.cpu().numpy() if curr_imgs_nosync is not None else None,
             )
         )  # codes -> image
 
@@ -149,17 +149,17 @@ def fill_batch_log(batch_log, key, model, codes, eval_params, sync_manager=None)
             aug_imgs_zero_to_one = aug_imgs_zero_to_one.clamp(0, 1)  # clamp after
             aug_imgs = aug_imgs_zero_to_one * 2.0 - 1.0  # [-1, 1] again
             if sync_manager is not None:
-                aug_imgs_nowam = sync_manager.remove_wam(aug_imgs)
-                aug_codes = model.images_to_codes(aug_imgs_nowam)
+                aug_imgs_nosync = sync_manager.remove_sync(aug_imgs)
+                aug_codes = model.images_to_codes(aug_imgs_nosync)
             else:
-                aug_imgs_nowam = None
+                aug_imgs_nosync = None
                 aug_codes = model.images_to_codes(aug_imgs)
             batch_log[key][aug_name].append(
                 (
                     aug_param,
                     aug_codes.cpu().numpy(),
                     aug_imgs.cpu().numpy(),
-                    aug_imgs_nowam.cpu().numpy() if aug_imgs_nowam is not None else None,
+                    aug_imgs_nosync.cpu().numpy() if aug_imgs_nosync is not None else None,
                 )
             )  # image-->codes
 
@@ -278,9 +278,9 @@ def get_parser():
     parser.add_argument("--wm_context_size", type=int, nargs="?", help="context size", default=0)
     parser.add_argument("--wm_delta", type=float, nargs="?", help="wm strength")
     parser.add_argument("--wm_gamma", type=float, nargs="?", help="wm gamma", default=0)
-    parser.add_argument("--wam", type=str2bool, default=False)
+    parser.add_argument("--sync", type=str2bool, default=False)
     parser.add_argument(
-        "--wampath",
+        "--syncpath",
         type=str,
     )
     parser.add_argument("--seed", type=int, nargs="?", help="seed", default=42)
@@ -403,11 +403,11 @@ if __name__ == "__main__":
         logger.error(f"Error getting compressors: {e}")
         compressors = None
 
-    # Wam manager
-    if not args.wam:
+    # Sync manager
+    if not args.sync:
         sync_manager = None
     else:
-        sync_manager = SyncManager(args.wampath, device="cuda")
+        sync_manager = SyncManager(args.syncpath, device="cuda")
 
     # Actually run generation and save outputs
     generate(
