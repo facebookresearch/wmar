@@ -22,13 +22,13 @@ from deps.watermark_anything.utils.inference_utils import (
 logger.remove()
 
 
-class SyncManager:
-    def __init__(self, wampath, device):
+class WamSync:
+    def __init__(self, syncpath, device):
         self.device = device
 
-        # NOTE: Make sure to download the model to wampath
+        # NOTE: Make sure to download the model to syncpath
         json_path = os.path.join("deps", "watermark_anything", "params.json")
-        ckpt_path = os.path.join(wampath)
+        ckpt_path = os.path.join(syncpath)
         self.wam = load_model_from_checkpoint(json_path, ckpt_path).to(device).eval()
         self.epsilon = 1
         self.min_samples = 500
@@ -65,7 +65,7 @@ class SyncManager:
         return imgs.clamp(-1, 1)
 
     # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
-    def add_wam(self, imgs, return_masks=False):
+    def add_sync(self, imgs, return_masks=False):
         orig_device = imgs.device
         imgs = self.normalize(imgs).to(self.device)
         masks = self.create_grid_mask(imgs[-1], num_masks=len(self.wm_msgs))
@@ -85,7 +85,7 @@ class SyncManager:
             return ret
 
     # imgs: [b, 3, 256, 256] in [-1, 1] -> return same
-    def remove_wam(self, imgs, return_info=False):
+    def remove_sync(self, imgs, return_info=False):
         orig_device = imgs.device
         imgs = self.normalize(imgs).to(self.device)
         preds = self.wam.detect(imgs)["preds"]  # [B, 33, 256, 256]

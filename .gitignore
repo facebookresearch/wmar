@@ -2,6 +2,7 @@
 *.cache/
 assets/cache*
 .nfs*
+.history/
 
 *checkpoints/
 *downloads/

@@ -19,19 +19,19 @@
         "wm_delta":                     2,  
         "wm_seed_strategy":             "fixed",
         "wm_method":                    "gentime",
-        "wampath":                      "checkpoints/wam_mit.pth",
+        "syncpath":                      "checkpoints/wam_mit.pth",
         "encoder_ft_ckpt": {
             "none": {
                 "decoder_ft_ckpt":      "none",
-                "wam":                  false
+                "sync":                  false
             },
             "checkpoints/finetunes/chameleon7b_encoder_ft_noaug_delta.pth": {
                 "decoder_ft_ckpt":      "checkpoints/finetunes/chameleon7b_decoder_ft_noaug_delta.pth",
-                "wam":                  false
+                "sync":                  false
             },
             "checkpoints/finetunes/chameleon7b_encoder_ft_delta.pth": {
                 "decoder_ft_ckpt":      "checkpoints/finetunes/chameleon7b_decoder_ft_delta.pth",
-                "wam":                  [true, false]
+                "sync":                  [true, false]
             }
         },
         "seed": 1

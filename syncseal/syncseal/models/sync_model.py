@@ -20,7 +20,7 @@ from .blender import Blender
 from .embedder import Embedder
 from .extractor import Extractor
 try:
-    from .wam_sync import SyncManager
+    from .wam_sync import WamSync
 except:
     import inspect
     frame = inspect.currentframe()
@@ -362,7 +362,7 @@ class SIFTSyncModel(nn.Module):
 
 class WAMSyncModel(nn.Module):
     """
-    Wrapper for WAM watermark-anything model using SyncManager.
+    Wrapper for WAM watermark-anything model using WamSync.
     """
 
     def __init__(self, img_size=256, device="cpu"):
@@ -378,7 +378,7 @@ class WAMSyncModel(nn.Module):
         super().__init__()
         self.img_size = img_size
         self.device = device
-        self.sync_manager = SyncManager(model_path, device)
+        self.sync_manager = WamSync(model_path, device)
 
     def to(self, device):
         self.device = device
@@ -388,7 +388,7 @@ class WAMSyncModel(nn.Module):
     def embed(self, imgs, **kwargs):
         # imgs: BxCxHxW, expects [-1, 1] range, returns dict with imgs_w and preds_w
         imgs = imgs.to(self.device)
-        imgs_w = self.sync_manager.add_wam(imgs)
+        imgs_w = self.sync_manager.add_sync(imgs)
         preds_w = torch.zeros_like(imgs)  
         return {"imgs_w": imgs_w, "preds_w": preds_w}
 
@@ -399,7 +399,7 @@ class WAMSyncModel(nn.Module):
         # resize to 256x256 if needed
         if imgs.shape[-2:] != (self.img_size, self.img_size):
             imgs = F.interpolate(imgs, size=(self.img_size, self.img_size), mode='bilinear', align_corners=False)
-        imgs_wam, aug_info, wam_info = self.sync_manager.remove_wam(imgs, return_info=True)
+        imgs_sync, aug_info, wam_info = self.sync_manager.remove_sync(imgs, return_info=True)
         angle, cuti, cutj, is_flipped = aug_info
         cuti = min(max(cuti,0), (self.img_size-1))
         cutj = min(max(cutj,0), (self.img_size-1))
