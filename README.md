@@ -13,7 +13,7 @@ In [`wmar_audio`](https://github.com/facebookresearch/wmar/tree/main/wmar_audio)
 
 ## 📰 News
 
-- **19th September**: New work on watermark synchronization! Check out [SyncSeal](https://arxiv.org/abs/2506.16349) - an active method for synchronizing images and improving robustness against desynchronization attacks. Code is available in the [`syncseal/`](11-autoregressive/wmar/syncseal) folder.
+- **19th September**: New work on watermark synchronization! Check out [SyncSeal](https://arxiv.org/abs/2509.15208) - an active method for synchronizing images and improving robustness against desynchronization attacks. Code is available in the [`syncseal/`](11-autoregressive/wmar/syncseal) folder.
 - **18th September**: Our paper has been accepted to NeurIPS 2025! 🎉
 
 
