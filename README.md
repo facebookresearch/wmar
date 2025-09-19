@@ -4,11 +4,6 @@
   <img src="https://dl.fbaipublicfiles.com/wmar/gimmick.gif" alt="Watermarking Demo" width="600"/>
 </p>
 
-## 📰 News
-
-- **19th September 2024**: New work on watermark synchronization! Check out [SyncSeal](https://arxiv.org/abs/2409.12715) - an active method for synchronizing images and improving robustness against desynchronization attacks. Code is available in the [`syncseal/`](11-autoregressive/wmar_fbresearch/syncseal) folder.
-- **18th September 2024**: Our paper has been accepted to NeurIPS 2025! 🎉
-
 Official implementation of [Watermarking Autoregressive Image Generation](https://arxiv.org/pdf/2506.16349).
 This repository provides a framework for watermarking autoregressive image models, and includes the code to reproduce the main results from the paper. 
 In [`wmar_audio`](https://github.com/facebookresearch/wmar/tree/main/wmar_audio) we also provide the code accompanying our case study on Audio (see Section 5 in the paper). 
@@ -16,7 +11,10 @@ In [`wmar_audio`](https://github.com/facebookresearch/wmar/tree/main/wmar_audio)
 [[`arXiv`](https://arxiv.org/abs/2506.16349)]
 [[`Colab`](https://colab.research.google.com/github/facebookresearch/wmar/blob/main/notebooks/colab.ipynb)]
 
+## 📰 News
 
+- **19th September 2024**: New work on watermark synchronization! Check out [SyncSeal](https://arxiv.org/abs/2409.12715) - an active method for synchronizing images and improving robustness against desynchronization attacks. Code is available in the [`syncseal/`](11-autoregressive/wmar_fbresearch/syncseal) folder.
+- **18th September 2024**: Our paper has been accepted to NeurIPS 2025! 🎉
 
 
 ## 💿 Installation
