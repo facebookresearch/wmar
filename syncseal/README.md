@@ -2,7 +2,7 @@
 
 Self-contained code for robust image synchronization through watermark embedding, developed to improve the performance and robustness of Watermarking Autoregressive Image Generation (WMAR). This folder is standalone and does not depend on the WMAR repository. It was built upon the [Meta Video Seal codebase](https://github.com/facebookresearch/videoseal).
 
-See paper: [`arXiv`](TODO_add_arXiv_link)
+See paper: [`arXiv`](https://arxiv.org/abs/2509.15208)
 
 
 ## Quickstart: TorchScript inference
@@ -192,7 +192,7 @@ If you find this repository useful, please consider giving a star ⭐ and please
 @article{fernandez2025geometric,
     title={Geometric Image Synchronization with Deep Watermarking},
     author={Fernandez, Pierre and Sou\v{c}ek, Tom\'{a}\v{s} and Jovanovi\'{c}, Nikola and Elsahar, Hady and Rebuffi, Sylvestre-Alvise and Lacatusu, Valeriu and Tran, Tuan and Mourachko, Alexandre},
-    journal={arXiv preprint arXiv:TODO},
+    journal={arXiv preprint arXiv:2509.15208},
     year={2025}
 }
 ```
