@@ -23,6 +23,6 @@ torchinfo==1.8.0
 tqdm==4.67.1
 torchaudio==2.7.0
 torchvision==0.22.0
-transformers==4.51.3
+transformers==5.0.0rc3
 triton==3.3.0
 webdataset==0.2.111
