@@ -1,6 +1,6 @@
 accelerate==1.6.0
 compressai==1.2.6
-diffusers==0.33.1
+diffusers==0.38.0
 einops==0.8.1
 loguru==0.7.3
 matplotlib==3.10.0
