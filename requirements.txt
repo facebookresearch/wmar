@@ -12,7 +12,7 @@ pillow==12.2.0
 protobuf==5.29.4
 pycryptodome==3.22.0
 pytorch_lightning==2.5.1
-requests==2.32.3
+requests==2.33.0
 scikit_image==0.25.2
 scikit_learn==1.6.1
 sentencepiece==0.2.0
