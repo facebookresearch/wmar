@@ -8,7 +8,7 @@ numpy==1.26.4
 omegaconf==2.3.0
 open_clip_torch==2.32.0
 opencv_python==4.11.0.86
-pillow==11.2.1
+pillow==12.2.0
 protobuf==5.29.4
 pycryptodome==3.22.0
 pytorch_lightning==2.5.1
