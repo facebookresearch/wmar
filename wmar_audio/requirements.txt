@@ -12,7 +12,7 @@ torch==2.8.0
 torchmetrics[audio]==1.7.1
 accelerate
 rouge_score
-transformers>=4.40.0
+transformers>=5.5.0
 torchaudio
 tqdm
 bitsandbytes
